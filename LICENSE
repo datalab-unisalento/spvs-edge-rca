@@ -1,0 +1,36 @@
+CODE: MIT License
+
+Copyright (c) 2026 DataLab
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+DATA AND TEXT: Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Research data (CSV and logs), JSON context/response records, paper text,
+prompts, figures and prose documentation contributed by the authors are
+licensed under CC BY 4.0. You may share and adapt them, including commercially,
+provided appropriate credit is given, the license is linked and changes are
+indicated. Do not imply endorsement or impose additional restrictions.
+
+The full legal terms are incorporated by reference:
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Third-party software, model outputs, underlying external datasets and other
+third-party materials remain subject to their original rights and licenses;
+this notice does not grant rights the contributors do not hold.
