@@ -1,0 +1,1723 @@
+{
+  "episodes": {
+    "evaluated": 64,
+    "matched_predictions": 64,
+    "coverage_pct": 1.0
+  },
+  "ground_truth_vs_baseline_metrics": {
+    "labels": [
+      "communication",
+      "electrical_fault",
+      "sensor_fault",
+      "weather",
+      "unknown"
+    ],
+    "total": 64,
+    "accuracy": 0.921875,
+    "macro_precision": 0.8,
+    "macro_recall": 0.7696969696969698,
+    "macro_f1": 0.7836065573770492,
+    "balanced_accuracy": 0.7696969696969698,
+    "kappa": 0.8709156918112142,
+    "weighted_precision": 1.0,
+    "weighted_recall": 0.921875,
+    "weighted_f1": 0.9577356557377048,
+    "per_class": {
+      "communication": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "electrical_fault": {
+        "precision": 1.0,
+        "recall": 0.8484848484848485,
+        "f1": 0.9180327868852458,
+        "support": 33
+      },
+      "sensor_fault": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 26
+      },
+      "weather": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "unknown": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      }
+    },
+    "confusion_matrix": {
+      "communication": {
+        "communication": 4,
+        "electrical_fault": 0,
+        "sensor_fault": 0,
+        "weather": 0,
+        "unknown": 0
+      },
+      "electrical_fault": {
+        "communication": 0,
+        "electrical_fault": 28,
+        "sensor_fault": 0,
+        "weather": 0,
+        "unknown": 5
+      },
+      "sensor_fault": {
+        "communication": 0,
+        "electrical_fault": 0,
+        "sensor_fault": 26,
+        "weather": 0,
+        "unknown": 0
+      },
+      "weather": {
+        "communication": 0,
+        "electrical_fault": 0,
+        "sensor_fault": 0,
+        "weather": 1,
+        "unknown": 0
+      },
+      "unknown": {
+        "communication": 0,
+        "electrical_fault": 0,
+        "sensor_fault": 0,
+        "weather": 0,
+        "unknown": 0
+      }
+    }
+  },
+  "ground_truth_vs_baseline_macro": {
+    "labels": [
+      "atmospheric_effects",
+      "physical_electrical",
+      "telemetry_and_sensing",
+      "unknown"
+    ],
+    "total": 64,
+    "accuracy": 0.921875,
+    "macro_precision": 0.75,
+    "macro_recall": 0.7121212121212122,
+    "macro_f1": 0.7295081967213115,
+    "balanced_accuracy": 0.7121212121212122,
+    "kappa": 0.8590929106120652,
+    "weighted_precision": 1.0,
+    "weighted_recall": 0.921875,
+    "weighted_f1": 0.9577356557377048,
+    "per_class": {
+      "atmospheric_effects": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "physical_electrical": {
+        "precision": 1.0,
+        "recall": 0.8484848484848485,
+        "f1": 0.9180327868852458,
+        "support": 33
+      },
+      "telemetry_and_sensing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 30
+      },
+      "unknown": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      }
+    },
+    "confusion_matrix": {
+      "atmospheric_effects": {
+        "atmospheric_effects": 1,
+        "physical_electrical": 0,
+        "telemetry_and_sensing": 0,
+        "unknown": 0
+      },
+      "physical_electrical": {
+        "atmospheric_effects": 0,
+        "physical_electrical": 28,
+        "telemetry_and_sensing": 0,
+        "unknown": 5
+      },
+      "telemetry_and_sensing": {
+        "atmospheric_effects": 0,
+        "physical_electrical": 0,
+        "telemetry_and_sensing": 30,
+        "unknown": 0
+      },
+      "unknown": {
+        "atmospheric_effects": 0,
+        "physical_electrical": 0,
+        "telemetry_and_sensing": 0,
+        "unknown": 0
+      }
+    }
+  },
+  "ground_truth_vs_majority_metrics": {
+    "labels": [
+      "communication",
+      "electrical_fault",
+      "sensor_fault",
+      "weather"
+    ],
+    "total": 64,
+    "accuracy": 0.515625,
+    "macro_precision": 0.12890625,
+    "macro_recall": 0.25,
+    "macro_f1": 0.17010309278350516,
+    "balanced_accuracy": 0.25,
+    "kappa": 0.0,
+    "weighted_precision": 0.265869140625,
+    "weighted_recall": 0.515625,
+    "weighted_f1": 0.3508376288659794,
+    "per_class": {
+      "communication": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "electrical_fault": {
+        "precision": 0.515625,
+        "recall": 1.0,
+        "f1": 0.6804123711340206,
+        "support": 33
+      },
+      "sensor_fault": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 26
+      },
+      "weather": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      }
+    },
+    "confusion_matrix": {
+      "communication": {
+        "communication": 0,
+        "electrical_fault": 4,
+        "sensor_fault": 0,
+        "weather": 0
+      },
+      "electrical_fault": {
+        "communication": 0,
+        "electrical_fault": 33,
+        "sensor_fault": 0,
+        "weather": 0
+      },
+      "sensor_fault": {
+        "communication": 0,
+        "electrical_fault": 26,
+        "sensor_fault": 0,
+        "weather": 0
+      },
+      "weather": {
+        "communication": 0,
+        "electrical_fault": 1,
+        "sensor_fault": 0,
+        "weather": 0
+      }
+    },
+    "majority_class": "electrical_fault"
+  },
+  "ground_truth_vs_majority_macro": {
+    "labels": [
+      "atmospheric_effects",
+      "physical_electrical",
+      "telemetry_and_sensing"
+    ],
+    "total": 64,
+    "accuracy": 0.515625,
+    "macro_precision": 0.171875,
+    "macro_recall": 0.3333333333333333,
+    "macro_f1": 0.2268041237113402,
+    "balanced_accuracy": 0.3333333333333333,
+    "kappa": 0.0,
+    "weighted_precision": 0.265869140625,
+    "weighted_recall": 0.515625,
+    "weighted_f1": 0.3508376288659794,
+    "per_class": {
+      "atmospheric_effects": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "physical_electrical": {
+        "precision": 0.515625,
+        "recall": 1.0,
+        "f1": 0.6804123711340206,
+        "support": 33
+      },
+      "telemetry_and_sensing": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 30
+      }
+    },
+    "confusion_matrix": {
+      "atmospheric_effects": {
+        "atmospheric_effects": 0,
+        "physical_electrical": 1,
+        "telemetry_and_sensing": 0
+      },
+      "physical_electrical": {
+        "atmospheric_effects": 0,
+        "physical_electrical": 33,
+        "telemetry_and_sensing": 0
+      },
+      "telemetry_and_sensing": {
+        "atmospheric_effects": 0,
+        "physical_electrical": 30,
+        "telemetry_and_sensing": 0
+      }
+    },
+    "majority_class": "physical_electrical"
+  },
+  "ground_truth_vs_dtree_metrics": {
+    "labels": [
+      "communication",
+      "electrical_fault",
+      "sensor_fault",
+      "weather"
+    ],
+    "total": 64,
+    "accuracy": 0.984375,
+    "macro_precision": 0.7426470588235294,
+    "macro_recall": 0.75,
+    "macro_f1": 0.7462686567164178,
+    "balanced_accuracy": 0.75,
+    "kappa": 0.971954425942156,
+    "weighted_precision": 0.9692095588235294,
+    "weighted_recall": 0.984375,
+    "weighted_f1": 0.976679104477612,
+    "per_class": {
+      "communication": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "electrical_fault": {
+        "precision": 0.9705882352941176,
+        "recall": 1.0,
+        "f1": 0.9850746268656716,
+        "support": 33
+      },
+      "sensor_fault": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 26
+      },
+      "weather": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      }
+    },
+    "confusion_matrix": {
+      "communication": {
+        "communication": 4,
+        "electrical_fault": 0,
+        "sensor_fault": 0,
+        "weather": 0
+      },
+      "electrical_fault": {
+        "communication": 0,
+        "electrical_fault": 33,
+        "sensor_fault": 0,
+        "weather": 0
+      },
+      "sensor_fault": {
+        "communication": 0,
+        "electrical_fault": 0,
+        "sensor_fault": 26,
+        "weather": 0
+      },
+      "weather": {
+        "communication": 0,
+        "electrical_fault": 1,
+        "sensor_fault": 0,
+        "weather": 0
+      }
+    },
+    "cv": {
+      "n_splits": 5,
+      "shuffle": true,
+      "random_state": 42,
+      "per_fold_accuracy": [
+        1.0,
+        1.0,
+        1.0,
+        0.9230769230769231,
+        1.0
+      ],
+      "mean_fold_accuracy": 0.9846153846153847,
+      "std_fold_accuracy": 0.03076923076923075
+    },
+    "feature_names": [
+      "is_missing",
+      "severity_code",
+      "duration_seconds",
+      "data_points",
+      "observed_value",
+      "simulated_value",
+      "absolute_diff",
+      "relative_diff",
+      "rmse",
+      "moderate_threshold",
+      "severe_threshold",
+      "field_power",
+      "field_current",
+      "field_bus_voltage",
+      "has_weather_hint",
+      "has_soiling_hint",
+      "pitch_delta",
+      "yaw_delta",
+      "hour"
+    ]
+  },
+  "ground_truth_vs_dtree_macro": {
+    "labels": [
+      "atmospheric_effects",
+      "physical_electrical",
+      "telemetry_and_sensing"
+    ],
+    "total": 64,
+    "accuracy": 0.984375,
+    "macro_precision": 0.6568627450980392,
+    "macro_recall": 0.6666666666666666,
+    "macro_f1": 0.6616915422885572,
+    "balanced_accuracy": 0.6666666666666666,
+    "kappa": 0.9691417550626809,
+    "weighted_precision": 0.9692095588235294,
+    "weighted_recall": 0.984375,
+    "weighted_f1": 0.976679104477612,
+    "per_class": {
+      "atmospheric_effects": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "physical_electrical": {
+        "precision": 0.9705882352941176,
+        "recall": 1.0,
+        "f1": 0.9850746268656716,
+        "support": 33
+      },
+      "telemetry_and_sensing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 30
+      }
+    },
+    "confusion_matrix": {
+      "atmospheric_effects": {
+        "atmospheric_effects": 0,
+        "physical_electrical": 1,
+        "telemetry_and_sensing": 0
+      },
+      "physical_electrical": {
+        "atmospheric_effects": 0,
+        "physical_electrical": 33,
+        "telemetry_and_sensing": 0
+      },
+      "telemetry_and_sensing": {
+        "atmospheric_effects": 0,
+        "physical_electrical": 0,
+        "telemetry_and_sensing": 30
+      }
+    },
+    "cv": {
+      "n_splits": 5,
+      "shuffle": true,
+      "random_state": 42,
+      "per_fold_accuracy": [
+        1.0,
+        1.0,
+        1.0,
+        0.9230769230769231,
+        1.0
+      ],
+      "mean_fold_accuracy": 0.9846153846153847,
+      "std_fold_accuracy": 0.03076923076923075
+    },
+    "feature_names": [
+      "is_missing",
+      "severity_code",
+      "duration_seconds",
+      "data_points",
+      "observed_value",
+      "simulated_value",
+      "absolute_diff",
+      "relative_diff",
+      "rmse",
+      "moderate_threshold",
+      "severe_threshold",
+      "field_power",
+      "field_current",
+      "field_bus_voltage",
+      "has_weather_hint",
+      "has_soiling_hint",
+      "pitch_delta",
+      "yaw_delta",
+      "hour"
+    ]
+  },
+  "ground_truth_vs_llm_metrics": {
+    "labels": [
+      "communication",
+      "electrical_fault",
+      "model_mismatch",
+      "sensor_fault",
+      "weather",
+      "unknown"
+    ],
+    "total": 64,
+    "accuracy": 0.765625,
+    "macro_precision": 0.41416040100250623,
+    "macro_recall": 0.4674630924630925,
+    "macro_f1": 0.4213909932659932,
+    "balanced_accuracy": 0.4674630924630925,
+    "kappa": 0.6233817183209102,
+    "weighted_precision": 0.8744713345864661,
+    "weighted_recall": 0.765625,
+    "weighted_f1": 0.810180910669192,
+    "per_class": {
+      "communication": {
+        "precision": 0.14285714285714285,
+        "recall": 0.25,
+        "f1": 0.18181818181818182,
+        "support": 4
+      },
+      "electrical_fault": {
+        "precision": 1.0,
+        "recall": 0.9393939393939394,
+        "f1": 0.96875,
+        "support": 33
+      },
+      "model_mismatch": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "sensor_fault": {
+        "precision": 0.8421052631578947,
+        "recall": 0.6153846153846154,
+        "f1": 0.7111111111111111,
+        "support": 26
+      },
+      "weather": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "support": 1
+      },
+      "unknown": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      }
+    },
+    "confusion_matrix": {
+      "communication": {
+        "communication": 1,
+        "electrical_fault": 0,
+        "model_mismatch": 0,
+        "sensor_fault": 3,
+        "weather": 0,
+        "unknown": 0
+      },
+      "electrical_fault": {
+        "communication": 0,
+        "electrical_fault": 31,
+        "model_mismatch": 1,
+        "sensor_fault": 0,
+        "weather": 1,
+        "unknown": 0
+      },
+      "model_mismatch": {
+        "communication": 0,
+        "electrical_fault": 0,
+        "model_mismatch": 0,
+        "sensor_fault": 0,
+        "weather": 0,
+        "unknown": 0
+      },
+      "sensor_fault": {
+        "communication": 6,
+        "electrical_fault": 0,
+        "model_mismatch": 0,
+        "sensor_fault": 16,
+        "weather": 0,
+        "unknown": 4
+      },
+      "weather": {
+        "communication": 0,
+        "electrical_fault": 0,
+        "model_mismatch": 0,
+        "sensor_fault": 0,
+        "weather": 1,
+        "unknown": 0
+      },
+      "unknown": {
+        "communication": 0,
+        "electrical_fault": 0,
+        "model_mismatch": 0,
+        "sensor_fault": 0,
+        "weather": 0,
+        "unknown": 0
+      }
+    }
+  },
+  "ground_truth_vs_llm_macro": {
+    "labels": [
+      "atmospheric_effects",
+      "physical_electrical",
+      "telemetry_and_sensing",
+      "unknown"
+    ],
+    "total": 64,
+    "accuracy": 0.921875,
+    "macro_precision": 0.625,
+    "macro_recall": 0.7090909090909091,
+    "macro_f1": 0.64496336996337,
+    "balanced_accuracy": 0.7090909090909091,
+    "kappa": 0.858281665190434,
+    "weighted_precision": 0.9921875,
+    "weighted_recall": 0.921875,
+    "weighted_f1": 0.9533768315018315,
+    "per_class": {
+      "atmospheric_effects": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "support": 1
+      },
+      "physical_electrical": {
+        "precision": 1.0,
+        "recall": 0.9696969696969697,
+        "f1": 0.9846153846153847,
+        "support": 33
+      },
+      "telemetry_and_sensing": {
+        "precision": 1.0,
+        "recall": 0.8666666666666667,
+        "f1": 0.9285714285714286,
+        "support": 30
+      },
+      "unknown": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      }
+    },
+    "confusion_matrix": {
+      "atmospheric_effects": {
+        "atmospheric_effects": 1,
+        "physical_electrical": 0,
+        "telemetry_and_sensing": 0,
+        "unknown": 0
+      },
+      "physical_electrical": {
+        "atmospheric_effects": 1,
+        "physical_electrical": 32,
+        "telemetry_and_sensing": 0,
+        "unknown": 0
+      },
+      "telemetry_and_sensing": {
+        "atmospheric_effects": 0,
+        "physical_electrical": 0,
+        "telemetry_and_sensing": 26,
+        "unknown": 4
+      },
+      "unknown": {
+        "atmospheric_effects": 0,
+        "physical_electrical": 0,
+        "telemetry_and_sensing": 0,
+        "unknown": 0
+      }
+    }
+  },
+  "ground_truth_vs_baseline_breakdown": [
+    {
+      "type": "voltage/bus_voltage",
+      "correct": 29,
+      "incorrect": 5,
+      "total": 34,
+      "accuracy": 0.8529411764705882
+    },
+    {
+      "type": "null",
+      "correct": 30,
+      "incorrect": 0,
+      "total": 30,
+      "accuracy": 1.0
+    }
+  ],
+  "ground_truth_vs_llm_breakdown": [
+    {
+      "type": "voltage/bus_voltage",
+      "correct": 32,
+      "incorrect": 2,
+      "total": 34,
+      "accuracy": 0.9411764705882353
+    },
+    {
+      "type": "null",
+      "correct": 17,
+      "incorrect": 13,
+      "total": 30,
+      "accuracy": 0.5666666666666667
+    }
+  ],
+  "macro_groups": {
+    "physical_electrical": [
+      "electrical_fault",
+      "orientation_issue",
+      "model_mismatch"
+    ],
+    "atmospheric_effects": [
+      "environmental_effect",
+      "weather"
+    ],
+    "telemetry_and_sensing": [
+      "sensor_fault",
+      "communication"
+    ],
+    "degradation": [
+      "degradation"
+    ],
+    "contamination": [
+      "soiling"
+    ],
+    "unknown": [
+      "unknown"
+    ]
+  },
+  "ground_truth_vs_baseline_mismatches": [
+    {
+      "episode_index": 3,
+      "episode_key": "voltage@2026-05-23T09:36:44+00:00",
+      "anomaly_type": "voltage",
+      "start_time": "2026-05-23T09:36:44+00:00",
+      "end_time": "2026-05-23T09:37:31+00:00",
+      "severity": "severe",
+      "data_points": 45,
+      "duration_seconds": 47.0,
+      "field": "bus_voltage",
+      "observed_value": 15.03315661408632,
+      "simulated_value": 20.912981365191627,
+      "absolute_diff": 5.879824751105307,
+      "relative_diff": 0.281156696332734,
+      "rmse": 0.0894701125675995,
+      "moderate_threshold": 2.0,
+      "severe_threshold": 2.0,
+      "ground_truth_category": "electrical_fault",
+      "ground_truth_confidence": 0.86,
+      "ground_truth_evidence": [
+        "absolute_diff=5.880>severe_threshold=2.000",
+        "relative_diff=0.281>=0.15",
+        "absolute_diff=5.880>=min_abs(3.000)",
+        "absolute_diff=5.880>moderate_threshold=2.000",
+        "threshold_based_severe_deviation_matches_electrical_fault",
+        "relative_diff=0.281"
+      ],
+      "baseline_category": "unknown",
+      "baseline_confidence": 0.5,
+      "baseline_evidence": [
+        "no_priority_rule_matched",
+        "anomaly_type=voltage",
+        "severity=severe",
+        "duration_seconds=47.0"
+      ],
+      "llm_category": "electrical_fault",
+      "llm_confidence": 0.9,
+      "llm_evidence": [
+        "The observed bus voltage (15.03V) is significantly lower than the simulated value (20.91V), showing an absolute difference of 5.88V.",
+        "The historical average bus voltage was around 20.79V, while the simulation consistently predicts ~20.95V.",
+        "This large discrepancy suggests a major drop in electrical performance not accounted for by standard environmental or degradation models.",
+        "The anomaly type is 'voltage' and the severity is 'severe', indicating a substantial loss of expected voltage output."
+      ],
+      "ground_truth_macro": "physical_electrical",
+      "baseline_macro": "unknown",
+      "llm_macro": "physical_electrical",
+      "is_missing": 0,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T09"
+    },
+    {
+      "episode_index": 4,
+      "episode_key": "voltage@2026-05-23T09:39:07+00:00",
+      "anomaly_type": "voltage",
+      "start_time": "2026-05-23T09:39:07+00:00",
+      "end_time": "2026-05-23T09:39:31+00:00",
+      "severity": "severe",
+      "data_points": 23,
+      "duration_seconds": 24.0,
+      "field": "bus_voltage",
+      "observed_value": 15.482593508364717,
+      "simulated_value": 20.912981365191627,
+      "absolute_diff": 5.4303878568269095,
+      "relative_diff": 0.25966588703920795,
+      "rmse": 0.10743982170998072,
+      "moderate_threshold": 2.0,
+      "severe_threshold": 2.0,
+      "ground_truth_category": "electrical_fault",
+      "ground_truth_confidence": 0.86,
+      "ground_truth_evidence": [
+        "absolute_diff=5.430>severe_threshold=2.000",
+        "relative_diff=0.260>=0.15",
+        "absolute_diff=5.430>=min_abs(3.000)",
+        "absolute_diff=5.430>moderate_threshold=2.000",
+        "threshold_based_severe_deviation_matches_electrical_fault",
+        "relative_diff=0.260"
+      ],
+      "baseline_category": "unknown",
+      "baseline_confidence": 0.5,
+      "baseline_evidence": [
+        "no_priority_rule_matched",
+        "anomaly_type=voltage",
+        "severity=severe",
+        "duration_seconds=24.0"
+      ],
+      "llm_category": "electrical_fault",
+      "llm_confidence": 0.9,
+      "llm_evidence": [
+        "The observed bus voltage (15.48 V) is significantly lower than the simulated/expected value (20.91 V), showing an absolute difference of 5.43 V.",
+        "The historical mean bus voltage was 20.79 V, while the current reading is much lower, indicating a sudden and severe drop in electrical performance.",
+        "The discrepancy between observed and simulated values suggests a major loss of power generation capability within the string or array."
+      ],
+      "ground_truth_macro": "physical_electrical",
+      "baseline_macro": "unknown",
+      "llm_macro": "physical_electrical",
+      "is_missing": 0,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T09"
+    },
+    {
+      "episode_index": 15,
+      "episode_key": "voltage@2026-05-23T10:56:52+00:00",
+      "anomaly_type": "voltage",
+      "start_time": "2026-05-23T10:56:52+00:00",
+      "end_time": "2026-05-23T10:57:13+00:00",
+      "severity": "severe",
+      "data_points": 20,
+      "duration_seconds": 21.0,
+      "field": "bus_voltage",
+      "observed_value": 13.833508778864505,
+      "simulated_value": 20.77992675553287,
+      "absolute_diff": 6.946417976668364,
+      "relative_diff": 0.3342850077572487,
+      "rmse": 0.10649696285136157,
+      "moderate_threshold": 2.0,
+      "severe_threshold": 2.0,
+      "ground_truth_category": "electrical_fault",
+      "ground_truth_confidence": 0.86,
+      "ground_truth_evidence": [
+        "absolute_diff=6.946>severe_threshold=2.000",
+        "relative_diff=0.334>=0.15",
+        "absolute_diff=6.946>=min_abs(3.000)",
+        "absolute_diff=6.946>moderate_threshold=2.000",
+        "threshold_based_severe_deviation_matches_electrical_fault",
+        "relative_diff=0.334"
+      ],
+      "baseline_category": "unknown",
+      "baseline_confidence": 0.5,
+      "baseline_evidence": [
+        "no_priority_rule_matched",
+        "anomaly_type=voltage",
+        "severity=severe",
+        "duration_seconds=21.0"
+      ],
+      "llm_category": "electrical_fault",
+      "llm_confidence": 0.9,
+      "llm_evidence": [
+        "The observed bus voltage (13.83 V) is significantly lower than the simulated bus voltage (20.78 V).",
+        "The absolute difference between observed and simulated values is large (6.95 V), exceeding typical thresholds.",
+        "Historical data shows the observed bus voltage mean (19.34 V) and last value (20.80 V) are close to, but slightly below, the simulated mean (20.93 V) and last value (20.91 V).",
+        "The discrepancy suggests a failure in converting or measuring the expected high voltage output."
+      ],
+      "ground_truth_macro": "physical_electrical",
+      "baseline_macro": "unknown",
+      "llm_macro": "physical_electrical",
+      "is_missing": 0,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T10"
+    },
+    {
+      "episode_index": 18,
+      "episode_key": "voltage@2026-05-23T11:08:36+00:00",
+      "anomaly_type": "voltage",
+      "start_time": "2026-05-23T11:08:36+00:00",
+      "end_time": "2026-05-23T11:09:27+00:00",
+      "severity": "severe",
+      "data_points": 49,
+      "duration_seconds": 51.0,
+      "field": "bus_voltage",
+      "observed_value": 16.48249003577869,
+      "simulated_value": 20.77903882152259,
+      "absolute_diff": 4.2965487857439015,
+      "relative_diff": 0.20677322096793074,
+      "rmse": 0.08097175852355698,
+      "moderate_threshold": 2.0,
+      "severe_threshold": 2.0,
+      "ground_truth_category": "electrical_fault",
+      "ground_truth_confidence": 0.86,
+      "ground_truth_evidence": [
+        "absolute_diff=4.297>severe_threshold=2.000",
+        "relative_diff=0.207>=0.15",
+        "absolute_diff=4.297>=min_abs(3.000)",
+        "absolute_diff=4.297>moderate_threshold=2.000",
+        "threshold_based_severe_deviation_matches_electrical_fault",
+        "relative_diff=0.207"
+      ],
+      "baseline_category": "unknown",
+      "baseline_confidence": 0.5,
+      "baseline_evidence": [
+        "no_priority_rule_matched",
+        "anomaly_type=voltage",
+        "severity=severe",
+        "duration_seconds=51.0"
+      ],
+      "llm_category": "electrical_fault",
+      "llm_confidence": 0.9,
+      "llm_evidence": [
+        "The observed bus voltage (16.48V) is significantly lower than the simulated/expected value (20.78V), representing a large absolute difference of ~4.3V.",
+        "The historical average bus voltage (mean: 18.55V, p95: 21.07V) suggests the system should be operating near or above 20V under normal conditions.",
+        "The simulation provides a stable expected bus voltage of 20.91V, indicating the model expects high performance.",
+        "A severe drop in measured voltage relative to the simulated/historical baseline strongly suggests an electrical fault limiting power output (e.g., partial shading or string failure)."
+      ],
+      "ground_truth_macro": "physical_electrical",
+      "baseline_macro": "unknown",
+      "llm_macro": "physical_electrical",
+      "is_missing": 0,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T11"
+    },
+    {
+      "episode_index": 64,
+      "episode_key": "voltage@2026-05-23T16:04:58+00:00",
+      "anomaly_type": "voltage",
+      "start_time": "2026-05-23T16:04:58+00:00",
+      "end_time": "2026-05-23T16:07:59+00:00",
+      "severity": "severe",
+      "data_points": 161,
+      "duration_seconds": 181.0,
+      "field": "bus_voltage",
+      "observed_value": -2.9976235879820323,
+      "simulated_value": 0.0,
+      "absolute_diff": 2.9976235879820323,
+      "relative_diff": 2.9976235879820323,
+      "rmse": 0.0,
+      "moderate_threshold": 2.0,
+      "severe_threshold": 2.0,
+      "ground_truth_category": "electrical_fault",
+      "ground_truth_confidence": 0.92,
+      "ground_truth_evidence": [
+        "relative_diff=2.998>=0.40",
+        "absolute_diff=2.998>severe_threshold=2.000",
+        "relative_diff=2.998>=0.15",
+        "absolute_diff=2.998>moderate_threshold=2.000",
+        "long_duration_and_severe_threshold_match_electrical_fault",
+        "relative_diff=2.998"
+      ],
+      "baseline_category": "unknown",
+      "baseline_confidence": 0.5,
+      "baseline_evidence": [
+        "no_priority_rule_matched",
+        "anomaly_type=voltage",
+        "severity=severe",
+        "duration_seconds=181.0"
+      ],
+      "llm_category": "weather",
+      "llm_confidence": 0.9,
+      "llm_evidence": [
+        "The anomaly is a severe negative deviation in bus voltage (-2.997V observed vs 0.0 simulated).",
+        "Historical data shows the system operating normally (mean power: 2.34W; mean voltage: 17.44V).",
+        "Simulation data suggests a stable, high-voltage baseline (19.93V) that is not matching the observed low voltage.",
+        "The inference hint explicitly states 'weather_more_likely_than_hardware_fault'.",
+        "The anomaly type is 'voltage' and occurred at 16:05, which is a common time for cloud passages to affect PV output."
+      ],
+      "ground_truth_macro": "physical_electrical",
+      "baseline_macro": "unknown",
+      "llm_macro": "atmospheric_effects",
+      "is_missing": 0,
+      "has_weather_hint": 1,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T16"
+    }
+  ],
+  "ground_truth_vs_llm_mismatches": [
+    {
+      "episode_index": 12,
+      "episode_key": "missing_voltage_sensors@2026-05-23T10:39:07+00:00",
+      "anomaly_type": "missing_voltage_sensors",
+      "start_time": "2026-05-23T10:39:07+00:00",
+      "end_time": "2026-05-23T10:39:18+00:00",
+      "severity": "",
+      "data_points": 11,
+      "duration_seconds": 11.0,
+      "field": "missing_voltage_sensors",
+      "observed_value": null,
+      "simulated_value": null,
+      "absolute_diff": null,
+      "relative_diff": null,
+      "rmse": null,
+      "moderate_threshold": null,
+      "severe_threshold": null,
+      "ground_truth_category": "communication",
+      "ground_truth_confidence": 0.93,
+      "ground_truth_evidence": [
+        "brief_missing_episode_matches_transport_or_mqtt_interrupt",
+        "anomaly_type=missing_voltage_sensors",
+        "duration_seconds=11.0"
+      ],
+      "baseline_category": "communication",
+      "baseline_confidence": 1.0,
+      "baseline_evidence": [
+        "brief_missing_episode_matches_transport_or_mqtt_interrupt",
+        "anomaly_type=missing_voltage_sensors",
+        "duration_seconds=11.0",
+        "data_points=11"
+      ],
+      "llm_category": "sensor_fault",
+      "llm_confidence": 0.9,
+      "llm_evidence": [
+        "event: missing_voltage_sensors (11s duration)",
+        "The anomaly is explicitly defined as 'missing_voltage_sensors'.",
+        "No other evidence contradicts this direct sensor failure report."
+      ],
+      "ground_truth_macro": "telemetry_and_sensing",
+      "baseline_macro": "telemetry_and_sensing",
+      "llm_macro": "telemetry_and_sensing",
+      "is_missing": 1,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 1,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T10"
+    },
+    {
+      "episode_index": 17,
+      "episode_key": "missing_voltage_sensors@2026-05-23T11:02:11+00:00",
+      "anomaly_type": "missing_voltage_sensors",
+      "start_time": "2026-05-23T11:02:11+00:00",
+      "end_time": "2026-05-23T11:03:12+00:00",
+      "severity": "",
+      "data_points": 58,
+      "duration_seconds": 61.0,
+      "field": "missing_voltage_sensors",
+      "observed_value": null,
+      "simulated_value": null,
+      "absolute_diff": null,
+      "relative_diff": null,
+      "rmse": null,
+      "moderate_threshold": null,
+      "severe_threshold": null,
+      "ground_truth_category": "sensor_fault",
+      "ground_truth_confidence": 0.9,
+      "ground_truth_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_voltage_sensors",
+        "duration_seconds=61.0"
+      ],
+      "baseline_category": "sensor_fault",
+      "baseline_confidence": 1.0,
+      "baseline_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_voltage_sensors",
+        "duration_seconds=61.0",
+        "data_points=58"
+      ],
+      "llm_category": "unknown",
+      "llm_confidence": 0.1,
+      "llm_evidence": [
+        "The anomaly is reported as 'missing_voltage_sensors' starting at 11:02:11.",
+        "Historical data shows stable and plausible readings for power, current, and bus voltage (e.g., mean power ~16.9 W, mean current ~1.13 A, mean bus voltage ~20.78 V).",
+        "The simulation data is also highly consistent with the historical sensor data.",
+        "There are no other contextual clues (like weather changes, physical damage reports, or communication failures) to explain why the specific 'missing_voltage_sensors' anomaly was triggered."
+      ],
+      "ground_truth_macro": "telemetry_and_sensing",
+      "baseline_macro": "telemetry_and_sensing",
+      "llm_macro": "unknown",
+      "is_missing": 1,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T11"
+    },
+    {
+      "episode_index": 26,
+      "episode_key": "missing_power_sensors@2026-05-23T11:49:33+00:00",
+      "anomaly_type": "missing_power_sensors",
+      "start_time": "2026-05-23T11:49:33+00:00",
+      "end_time": "2026-05-23T11:52:58+00:00",
+      "severity": "",
+      "data_points": 191,
+      "duration_seconds": 205.0,
+      "field": "missing_power_sensors",
+      "observed_value": null,
+      "simulated_value": null,
+      "absolute_diff": null,
+      "relative_diff": null,
+      "rmse": null,
+      "moderate_threshold": null,
+      "severe_threshold": null,
+      "ground_truth_category": "sensor_fault",
+      "ground_truth_confidence": 0.9,
+      "ground_truth_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_power_sensors",
+        "duration_seconds=205.0"
+      ],
+      "baseline_category": "sensor_fault",
+      "baseline_confidence": 1.0,
+      "baseline_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_power_sensors",
+        "duration_seconds=205.0",
+        "data_points=191"
+      ],
+      "llm_category": "communication",
+      "llm_confidence": 0.9,
+      "llm_evidence": [
+        "anomaly_type: missing_power_sensors"
+      ],
+      "ground_truth_macro": "telemetry_and_sensing",
+      "baseline_macro": "telemetry_and_sensing",
+      "llm_macro": "telemetry_and_sensing",
+      "is_missing": 1,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T11"
+    },
+    {
+      "episode_index": 36,
+      "episode_key": "missing_power_sensors@2026-05-23T12:54:54+00:00",
+      "anomaly_type": "missing_power_sensors",
+      "start_time": "2026-05-23T12:54:54+00:00",
+      "end_time": "2026-05-23T12:55:56+00:00",
+      "severity": "",
+      "data_points": 58,
+      "duration_seconds": 62.0,
+      "field": "missing_power_sensors",
+      "observed_value": null,
+      "simulated_value": null,
+      "absolute_diff": null,
+      "relative_diff": null,
+      "rmse": null,
+      "moderate_threshold": null,
+      "severe_threshold": null,
+      "ground_truth_category": "sensor_fault",
+      "ground_truth_confidence": 0.9,
+      "ground_truth_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_power_sensors",
+        "duration_seconds=62.0"
+      ],
+      "baseline_category": "sensor_fault",
+      "baseline_confidence": 1.0,
+      "baseline_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_power_sensors",
+        "duration_seconds=62.0",
+        "data_points=58"
+      ],
+      "llm_category": "unknown",
+      "llm_confidence": 0.1,
+      "llm_evidence": [
+        "The event is flagged as 'missing_power_sensors' starting at 12:54:54.",
+        "Historical data (smartpv) shows stable readings for power (mean: 13.61), current (mean: 0.908), and bus voltage (mean: 17.86).",
+        "Simulation data is perfectly stable and consistent with the historical mean values, suggesting the model itself is reliable.",
+        "The anomaly type suggests a sensor or communication issue related to power measurement, but no specific sensor failure (drift, offset, etc.) is provided in the context.",
+        "Without knowing which specific sensors are missing or what the expected behavior should be during this 'missing_power_sensors' event, definitive diagnosis is impossible."
+      ],
+      "ground_truth_macro": "telemetry_and_sensing",
+      "baseline_macro": "telemetry_and_sensing",
+      "llm_macro": "unknown",
+      "is_missing": 1,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T12"
+    },
+    {
+      "episode_index": 37,
+      "episode_key": "missing_power_sensors@2026-05-23T13:10:30+00:00",
+      "anomaly_type": "missing_power_sensors",
+      "start_time": "2026-05-23T13:10:30+00:00",
+      "end_time": "2026-05-23T13:13:31+00:00",
+      "severity": "",
+      "data_points": 167,
+      "duration_seconds": 181.0,
+      "field": "missing_power_sensors",
+      "observed_value": null,
+      "simulated_value": null,
+      "absolute_diff": null,
+      "relative_diff": null,
+      "rmse": null,
+      "moderate_threshold": null,
+      "severe_threshold": null,
+      "ground_truth_category": "sensor_fault",
+      "ground_truth_confidence": 0.9,
+      "ground_truth_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_power_sensors",
+        "duration_seconds=181.0"
+      ],
+      "baseline_category": "sensor_fault",
+      "baseline_confidence": 1.0,
+      "baseline_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_power_sensors",
+        "duration_seconds=181.0",
+        "data_points=167"
+      ],
+      "llm_category": "communication",
+      "llm_confidence": 0.9,
+      "llm_evidence": [
+        "The anomaly type is 'missing_power_sensors', indicating a data acquisition issue.",
+        "The historical sensor/simulation data shows consistent readings for power, current, and bus voltage (e.g., smartpv power mean: 12.88; simulation power mean: 12.88).",
+        "However, the anomaly itself is defined by missing or unavailable power sensor data points.",
+        "The context does not provide physical evidence of a fault (like high temperature or shading), pointing towards a data layer issue."
+      ],
+      "ground_truth_macro": "telemetry_and_sensing",
+      "baseline_macro": "telemetry_and_sensing",
+      "llm_macro": "telemetry_and_sensing",
+      "is_missing": 1,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T13"
+    },
+    {
+      "episode_index": 40,
+      "episode_key": "missing_current_sensors@2026-05-23T13:27:06+00:00",
+      "anomaly_type": "missing_current_sensors",
+      "start_time": "2026-05-23T13:27:06+00:00",
+      "end_time": "2026-05-23T13:27:30+00:00",
+      "severity": "",
+      "data_points": 23,
+      "duration_seconds": 24.0,
+      "field": "missing_current_sensors",
+      "observed_value": null,
+      "simulated_value": null,
+      "absolute_diff": null,
+      "relative_diff": null,
+      "rmse": null,
+      "moderate_threshold": null,
+      "severe_threshold": null,
+      "ground_truth_category": "communication",
+      "ground_truth_confidence": 0.93,
+      "ground_truth_evidence": [
+        "brief_missing_episode_matches_transport_or_mqtt_interrupt",
+        "anomaly_type=missing_current_sensors",
+        "duration_seconds=24.0"
+      ],
+      "baseline_category": "communication",
+      "baseline_confidence": 1.0,
+      "baseline_evidence": [
+        "brief_missing_episode_matches_transport_or_mqtt_interrupt",
+        "anomaly_type=missing_current_sensors",
+        "duration_seconds=24.0",
+        "data_points=23"
+      ],
+      "llm_category": "sensor_fault",
+      "llm_confidence": 0.9,
+      "llm_evidence": [
+        "anomaly_type: missing_current_sensors"
+      ],
+      "ground_truth_macro": "telemetry_and_sensing",
+      "baseline_macro": "telemetry_and_sensing",
+      "llm_macro": "telemetry_and_sensing",
+      "is_missing": 1,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T13"
+    },
+    {
+      "episode_index": 45,
+      "episode_key": "missing_current_sensors@2026-05-23T14:01:10+00:00",
+      "anomaly_type": "missing_current_sensors",
+      "start_time": "2026-05-23T14:01:10+00:00",
+      "end_time": "2026-05-23T14:03:30+00:00",
+      "severity": "",
+      "data_points": 131,
+      "duration_seconds": 140.0,
+      "field": "missing_current_sensors",
+      "observed_value": null,
+      "simulated_value": null,
+      "absolute_diff": null,
+      "relative_diff": null,
+      "rmse": null,
+      "moderate_threshold": null,
+      "severe_threshold": null,
+      "ground_truth_category": "sensor_fault",
+      "ground_truth_confidence": 0.9,
+      "ground_truth_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_current_sensors",
+        "duration_seconds=140.0"
+      ],
+      "baseline_category": "sensor_fault",
+      "baseline_confidence": 1.0,
+      "baseline_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_current_sensors",
+        "duration_seconds=140.0",
+        "data_points=131"
+      ],
+      "llm_category": "communication",
+      "llm_confidence": 0.9,
+      "llm_evidence": [
+        "anomaly_type: missing_current_sensors"
+      ],
+      "ground_truth_macro": "telemetry_and_sensing",
+      "baseline_macro": "telemetry_and_sensing",
+      "llm_macro": "telemetry_and_sensing",
+      "is_missing": 1,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T14"
+    },
+    {
+      "episode_index": 49,
+      "episode_key": "missing_power_sensors@2026-05-23T14:20:40+00:00",
+      "anomaly_type": "missing_power_sensors",
+      "start_time": "2026-05-23T14:20:40+00:00",
+      "end_time": "2026-05-23T14:21:15+00:00",
+      "severity": "",
+      "data_points": 33,
+      "duration_seconds": 35.0,
+      "field": "missing_power_sensors",
+      "observed_value": null,
+      "simulated_value": null,
+      "absolute_diff": null,
+      "relative_diff": null,
+      "rmse": null,
+      "moderate_threshold": null,
+      "severe_threshold": null,
+      "ground_truth_category": "sensor_fault",
+      "ground_truth_confidence": 0.9,
+      "ground_truth_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_power_sensors",
+        "duration_seconds=35.0"
+      ],
+      "baseline_category": "sensor_fault",
+      "baseline_confidence": 1.0,
+      "baseline_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_power_sensors",
+        "duration_seconds=35.0",
+        "data_points=33"
+      ],
+      "llm_category": "communication",
+      "llm_confidence": 0.9,
+      "llm_evidence": [
+        "event: missing_power_sensors"
+      ],
+      "ground_truth_macro": "telemetry_and_sensing",
+      "baseline_macro": "telemetry_and_sensing",
+      "llm_macro": "telemetry_and_sensing",
+      "is_missing": 1,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T14"
+    },
+    {
+      "episode_index": 52,
+      "episode_key": "missing_current_sensors@2026-05-23T14:43:27+00:00",
+      "anomaly_type": "missing_current_sensors",
+      "start_time": "2026-05-23T14:43:27+00:00",
+      "end_time": "2026-05-23T14:45:56+00:00",
+      "severity": "",
+      "data_points": 139,
+      "duration_seconds": 149.0,
+      "field": "missing_current_sensors",
+      "observed_value": null,
+      "simulated_value": null,
+      "absolute_diff": null,
+      "relative_diff": null,
+      "rmse": null,
+      "moderate_threshold": null,
+      "severe_threshold": null,
+      "ground_truth_category": "sensor_fault",
+      "ground_truth_confidence": 0.9,
+      "ground_truth_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_current_sensors",
+        "duration_seconds=149.0"
+      ],
+      "baseline_category": "sensor_fault",
+      "baseline_confidence": 1.0,
+      "baseline_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_current_sensors",
+        "duration_seconds=149.0",
+        "data_points=139"
+      ],
+      "llm_category": "communication",
+      "llm_confidence": 0.9,
+      "llm_evidence": [
+        "The event anomaly type is 'missing_current_sensors'.",
+        "The context indicates a specific failure related to the current sensors.",
+        "Historical data (smartpv/current) and simulation data show normal operation metrics for power, current, and voltage over 240 points, suggesting the system was functioning correctly prior to or during the monitoring window, but the anomaly specifically flags missing sensor readings."
+      ],
+      "ground_truth_macro": "telemetry_and_sensing",
+      "baseline_macro": "telemetry_and_sensing",
+      "llm_macro": "telemetry_and_sensing",
+      "is_missing": 1,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T14"
+    },
+    {
+      "episode_index": 53,
+      "episode_key": "missing_power_sensors@2026-05-23T14:47:26+00:00",
+      "anomaly_type": "missing_power_sensors",
+      "start_time": "2026-05-23T14:47:26+00:00",
+      "end_time": "2026-05-23T14:49:40+00:00",
+      "severity": "",
+      "data_points": 126,
+      "duration_seconds": 134.0,
+      "field": "missing_power_sensors",
+      "observed_value": null,
+      "simulated_value": null,
+      "absolute_diff": null,
+      "relative_diff": null,
+      "rmse": null,
+      "moderate_threshold": null,
+      "severe_threshold": null,
+      "ground_truth_category": "sensor_fault",
+      "ground_truth_confidence": 0.9,
+      "ground_truth_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_power_sensors",
+        "duration_seconds=134.0"
+      ],
+      "baseline_category": "sensor_fault",
+      "baseline_confidence": 1.0,
+      "baseline_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_power_sensors",
+        "duration_seconds=134.0",
+        "data_points=126"
+      ],
+      "llm_category": "unknown",
+      "llm_confidence": 0.1,
+      "llm_evidence": [
+        "The anomaly is reported as 'missing_power_sensors' starting at 2026-05-23T14:47:26.",
+        "The provided context data (history) shows stable and consistent readings for power, current, and bus voltage over the last 90 minutes, suggesting normal operation prior to or during the anomaly detection window.",
+        "There is no explicit evidence of sensor failure (e.g., stuck values, drift, high noise) in the provided historical data structure itself, only a report that sensors are 'missing' power readings."
+      ],
+      "ground_truth_macro": "telemetry_and_sensing",
+      "baseline_macro": "telemetry_and_sensing",
+      "llm_macro": "unknown",
+      "is_missing": 1,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T14"
+    },
+    {
+      "episode_index": 54,
+      "episode_key": "missing_power_sensors@2026-05-23T15:03:18+00:00",
+      "anomaly_type": "missing_power_sensors",
+      "start_time": "2026-05-23T15:03:18+00:00",
+      "end_time": "2026-05-23T15:05:27+00:00",
+      "severity": "",
+      "data_points": 119,
+      "duration_seconds": 129.0,
+      "field": "missing_power_sensors",
+      "observed_value": null,
+      "simulated_value": null,
+      "absolute_diff": null,
+      "relative_diff": null,
+      "rmse": null,
+      "moderate_threshold": null,
+      "severe_threshold": null,
+      "ground_truth_category": "sensor_fault",
+      "ground_truth_confidence": 0.9,
+      "ground_truth_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_power_sensors",
+        "duration_seconds=129.0"
+      ],
+      "baseline_category": "sensor_fault",
+      "baseline_confidence": 1.0,
+      "baseline_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_power_sensors",
+        "duration_seconds=129.0",
+        "data_points=119"
+      ],
+      "llm_category": "communication",
+      "llm_confidence": 0.9,
+      "llm_evidence": [
+        "anomaly_type: missing_power_sensors"
+      ],
+      "ground_truth_macro": "telemetry_and_sensing",
+      "baseline_macro": "telemetry_and_sensing",
+      "llm_macro": "telemetry_and_sensing",
+      "is_missing": 1,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T15"
+    },
+    {
+      "episode_index": 55,
+      "episode_key": "missing_voltage_sensors@2026-05-23T15:09:11+00:00",
+      "anomaly_type": "missing_voltage_sensors",
+      "start_time": "2026-05-23T15:09:11+00:00",
+      "end_time": "2026-05-23T15:10:12+00:00",
+      "severity": "",
+      "data_points": 57,
+      "duration_seconds": 61.0,
+      "field": "missing_voltage_sensors",
+      "observed_value": null,
+      "simulated_value": null,
+      "absolute_diff": null,
+      "relative_diff": null,
+      "rmse": null,
+      "moderate_threshold": null,
+      "severe_threshold": null,
+      "ground_truth_category": "sensor_fault",
+      "ground_truth_confidence": 0.9,
+      "ground_truth_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_voltage_sensors",
+        "duration_seconds=61.0"
+      ],
+      "baseline_category": "sensor_fault",
+      "baseline_confidence": 1.0,
+      "baseline_evidence": [
+        "persistent_missing_episode_matches_sensor_stall",
+        "anomaly_type=missing_voltage_sensors",
+        "duration_seconds=61.0",
+        "data_points=57"
+      ],
+      "llm_category": "unknown",
+      "llm_confidence": 0.1,
+      "llm_evidence": [
+        "The anomaly is reported as 'missing_voltage_sensors' starting at 2026-05-23T15:09:11.",
+        "While the system reports missing voltage sensor data, all other available metrics (power, current, bus_voltage) show stable and consistent readings over the historical window (last 240 points).",
+        "The simulation model also shows highly stable values for power, current, and bus_voltage, suggesting the underlying physical process is normal.",
+        "There are no indications of external faults (e.g., shading, weather transients, degradation) that would explain a sudden loss of sensor data."
+      ],
+      "ground_truth_macro": "telemetry_and_sensing",
+      "baseline_macro": "telemetry_and_sensing",
+      "llm_macro": "unknown",
+      "is_missing": 1,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T15"
+    },
+    {
+      "episode_index": 59,
+      "episode_key": "missing_voltage_sensors@2026-05-23T15:36:20+00:00",
+      "anomaly_type": "missing_voltage_sensors",
+      "start_time": "2026-05-23T15:36:20+00:00",
+      "end_time": "2026-05-23T15:36:33+00:00",
+      "severity": "",
+      "data_points": 13,
+      "duration_seconds": 13.0,
+      "field": "missing_voltage_sensors",
+      "observed_value": null,
+      "simulated_value": null,
+      "absolute_diff": null,
+      "relative_diff": null,
+      "rmse": null,
+      "moderate_threshold": null,
+      "severe_threshold": null,
+      "ground_truth_category": "communication",
+      "ground_truth_confidence": 0.93,
+      "ground_truth_evidence": [
+        "brief_missing_episode_matches_transport_or_mqtt_interrupt",
+        "anomaly_type=missing_voltage_sensors",
+        "duration_seconds=13.0"
+      ],
+      "baseline_category": "communication",
+      "baseline_confidence": 1.0,
+      "baseline_evidence": [
+        "brief_missing_episode_matches_transport_or_mqtt_interrupt",
+        "anomaly_type=missing_voltage_sensors",
+        "duration_seconds=13.0",
+        "data_points=13"
+      ],
+      "llm_category": "sensor_fault",
+      "llm_confidence": 0.95,
+      "llm_evidence": [
+        "event: anomaly_type is 'missing_voltage_sensors'",
+        "The event explicitly states missing voltage sensor data for a duration of 13 seconds.",
+        "This points directly to a failure or loss of measurement from the specified sensors."
+      ],
+      "ground_truth_macro": "telemetry_and_sensing",
+      "baseline_macro": "telemetry_and_sensing",
+      "llm_macro": "telemetry_and_sensing",
+      "is_missing": 1,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T15"
+    },
+    {
+      "episode_index": 61,
+      "episode_key": "voltage@2026-05-23T15:44:52+00:00",
+      "anomaly_type": "voltage",
+      "start_time": "2026-05-23T15:44:52+00:00",
+      "end_time": "2026-05-23T15:47:33+00:00",
+      "severity": "severe",
+      "data_points": 151,
+      "duration_seconds": 161.0,
+      "field": "bus_voltage",
+      "observed_value": 12.854630324779198,
+      "simulated_value": 17.95833327506898,
+      "absolute_diff": 5.103702950289783,
+      "relative_diff": 0.28419691694747096,
+      "rmse": 0.06853331056515106,
+      "moderate_threshold": 2.0,
+      "severe_threshold": 2.0,
+      "ground_truth_category": "electrical_fault",
+      "ground_truth_confidence": 0.92,
+      "ground_truth_evidence": [
+        "absolute_diff=5.104>severe_threshold=2.000",
+        "relative_diff=0.284>=0.15",
+        "absolute_diff=5.104>=min_abs(3.000)",
+        "absolute_diff=5.104>moderate_threshold=2.000",
+        "long_duration_and_severe_threshold_match_electrical_fault",
+        "relative_diff=0.284"
+      ],
+      "baseline_category": "electrical_fault",
+      "baseline_confidence": 1.0,
+      "baseline_evidence": [
+        "severe_persistent_threshold_episode_without_weather_hint_matches_electrical_fault",
+        "duration_seconds=161.0"
+      ],
+      "llm_category": "model_mismatch",
+      "llm_confidence": 0.9,
+      "llm_evidence": [
+        "The observed bus voltage (12.85V) is significantly lower than the simulated bus voltage (17.96V). The absolute difference is 5.10V, which exceeds the severe threshold of 2.0V.",
+        "Historical data shows the observed bus voltage has a mean of 16.71V and a last value of 20.32V, while the simulated bus voltage is consistently 20.19V."
+      ],
+      "ground_truth_macro": "physical_electrical",
+      "baseline_macro": "physical_electrical",
+      "llm_macro": "physical_electrical",
+      "is_missing": 0,
+      "has_weather_hint": 0,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T15"
+    },
+    {
+      "episode_index": 64,
+      "episode_key": "voltage@2026-05-23T16:04:58+00:00",
+      "anomaly_type": "voltage",
+      "start_time": "2026-05-23T16:04:58+00:00",
+      "end_time": "2026-05-23T16:07:59+00:00",
+      "severity": "severe",
+      "data_points": 161,
+      "duration_seconds": 181.0,
+      "field": "bus_voltage",
+      "observed_value": -2.9976235879820323,
+      "simulated_value": 0.0,
+      "absolute_diff": 2.9976235879820323,
+      "relative_diff": 2.9976235879820323,
+      "rmse": 0.0,
+      "moderate_threshold": 2.0,
+      "severe_threshold": 2.0,
+      "ground_truth_category": "electrical_fault",
+      "ground_truth_confidence": 0.92,
+      "ground_truth_evidence": [
+        "relative_diff=2.998>=0.40",
+        "absolute_diff=2.998>severe_threshold=2.000",
+        "relative_diff=2.998>=0.15",
+        "absolute_diff=2.998>moderate_threshold=2.000",
+        "long_duration_and_severe_threshold_match_electrical_fault",
+        "relative_diff=2.998"
+      ],
+      "baseline_category": "unknown",
+      "baseline_confidence": 0.5,
+      "baseline_evidence": [
+        "no_priority_rule_matched",
+        "anomaly_type=voltage",
+        "severity=severe",
+        "duration_seconds=181.0"
+      ],
+      "llm_category": "weather",
+      "llm_confidence": 0.9,
+      "llm_evidence": [
+        "The anomaly is a severe negative deviation in bus voltage (-2.997V observed vs 0.0 simulated).",
+        "Historical data shows the system operating normally (mean power: 2.34W; mean voltage: 17.44V).",
+        "Simulation data suggests a stable, high-voltage baseline (19.93V) that is not matching the observed low voltage.",
+        "The inference hint explicitly states 'weather_more_likely_than_hardware_fault'.",
+        "The anomaly type is 'voltage' and occurred at 16:05, which is a common time for cloud passages to affect PV output."
+      ],
+      "ground_truth_macro": "physical_electrical",
+      "baseline_macro": "unknown",
+      "llm_macro": "atmospheric_effects",
+      "is_missing": 0,
+      "has_weather_hint": 1,
+      "has_soiling_hint": 0,
+      "pitch_delta": null,
+      "yaw_delta": null,
+      "episode_hour": "2026-05-23T16"
+    }
+  ]
+}

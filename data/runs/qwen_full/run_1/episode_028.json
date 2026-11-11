@@ -1,0 +1,246 @@
+{
+  "episode_index": 28,
+  "context": {
+    "event": {
+      "anomaly_type": "voltage",
+      "status": "started",
+      "severity": "severe",
+      "detected_at": "2026-05-23T12:02:43.413563+00:00",
+      "start_time": "2026-05-23T12:02:23",
+      "duration_seconds": null,
+      "data_points": 1,
+      "panel_id": null
+    },
+    "detection_context": {
+      "field": "bus_voltage",
+      "observed_value": 16.7800835393447,
+      "simulated_value": 20.753645774024335,
+      "absolute_diff": 3.9735622346796333,
+      "rmse": 0.08008121393235383,
+      "window_size": 20,
+      "moderate_threshold": 2.0,
+      "severe_threshold": 2.0,
+      "threshold_source": "rolling_rmse_with_minimum",
+      "thresholds_minimum": 2.0,
+      "rmse_window_capacity": 20
+    },
+    "history": {
+      "window_minutes": 90,
+      "smartpv": {
+        "power": {
+          "count": 240,
+          "min": 15.159929486327083,
+          "max": 15.621949185743047,
+          "mean": 15.375700690746582,
+          "std": 0.07805877904670233,
+          "p05": 15.247938598247258,
+          "p95": 15.50361167527384,
+          "last": 15.493772116268147,
+          "trend_per_step": 0.00015364427184326319
+        },
+        "current": {
+          "count": 240,
+          "min": 1.0066482987809766,
+          "max": 1.0617179063759004,
+          "mean": 1.033260605039182,
+          "std": 0.009945923421396692,
+          "p05": 1.017696509214959,
+          "p95": 1.0487999169699278,
+          "last": 1.0330553817428656,
+          "trend_per_step": -1.2772002853267777e-05
+        },
+        "bus_voltage": {
+          "count": 240,
+          "min": 20.5554855860615,
+          "max": 21.061230776886283,
+          "mean": 20.782540794447005,
+          "std": 0.10229616828928763,
+          "p05": 20.619279544424085,
+          "p95": 20.958096639216365,
+          "last": 20.76431084214379,
+          "trend_per_step": 3.499795586275755e-06
+        }
+      },
+      "simulation": {
+        "power": {
+          "count": 240,
+          "min": 15.371360270637151,
+          "max": 15.371360270637151,
+          "mean": 15.371360270637153,
+          "std": 1.7763568394002505e-15,
+          "p05": 15.371360270637151,
+          "p95": 15.371360270637151,
+          "last": 15.371360270637151,
+          "trend_per_step": -6.6408473374411435e-18
+        },
+        "current": {
+          "count": 240,
+          "min": 1.0330828217188328,
+          "max": 1.0330828217188328,
+          "mean": 1.0330828217188324,
+          "std": 4.440892098500626e-16,
+          "p05": 1.0330828217188328,
+          "p95": 1.0330828217188328,
+          "last": 1.0330828217188328,
+          "trend_per_step": -1.6602118343602859e-18
+        },
+        "bus_voltage": {
+          "count": 240,
+          "min": 20.786820487884142,
+          "max": 20.786820487884142,
+          "mean": 20.786820487884142,
+          "std": 0.0,
+          "p05": 20.786820487884142,
+          "p95": 20.786820487884142,
+          "last": 20.786820487884142,
+          "trend_per_step": 0.0
+        }
+      },
+      "pose": {
+        "yaw": {
+          "count": 240,
+          "min": 180.0,
+          "max": 180.0,
+          "mean": 180.0,
+          "std": 0.0,
+          "p05": 180.0,
+          "p95": 180.0,
+          "last": 180.0,
+          "trend_per_step": -4.250142295962332e-16
+        },
+        "pitch": {
+          "count": 240,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "std": 0.0,
+          "p05": 0.0,
+          "p95": 0.0,
+          "last": 0.0,
+          "trend_per_step": 0.0
+        },
+        "roll": {
+          "count": 240,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "std": 0.0,
+          "p05": 0.0,
+          "p95": 0.0,
+          "last": 0.0,
+          "trend_per_step": 0.0
+        }
+      },
+      "weather": {
+        "temp_air": {
+          "count": 6,
+          "min": 26.577999114990234,
+          "max": 26.977998733520508,
+          "mean": 26.794665972391766,
+          "std": 0.13743676166771093,
+          "p05": 26.602999210357666,
+          "p95": 26.96549892425537,
+          "last": 26.977998733520508,
+          "trend_per_step": 0.07999992370605541
+        },
+        "wind_speed": {
+          "count": 6,
+          "min": 23.85797882080078,
+          "max": 24.522315979003906,
+          "mean": 24.235300064086914,
+          "std": 0.28946086546547806,
+          "p05": 23.85797882080078,
+          "p95": 24.51768970489502,
+          "last": 23.85797882080078,
+          "trend_per_step": -0.1541738237653445
+        },
+        "ghi": {
+          "count": 6,
+          "min": 896.0,
+          "max": 934.0,
+          "mean": 921.0,
+          "std": 13.711309200802088,
+          "p05": 899.75,
+          "p95": 934.0,
+          "last": 896.0,
+          "trend_per_step": -7.599999999999987
+        },
+        "dhi": {
+          "count": 6,
+          "min": 130.0,
+          "max": 133.0,
+          "mean": 131.83333333333334,
+          "std": 1.0671873729054748,
+          "p05": 130.25,
+          "p95": 133.0,
+          "last": 130.0,
+          "trend_per_step": -0.6000000000000036
+        },
+        "dni": {
+          "count": 6,
+          "min": 841.7277221679688,
+          "max": 851.2765502929688,
+          "mean": 847.9844767252604,
+          "std": 3.3835963349215157,
+          "p05": 842.7339935302734,
+          "p95": 851.2438354492188,
+          "last": 841.7277221679688,
+          "trend_per_step": -1.870996093750052
+        },
+        "availability": {
+          "status": "ok",
+          "source": "openmeteo_archive",
+          "source_rows": 192,
+          "window_rows": 6
+        }
+      },
+      "weather_latest": {
+        "timestamp": "2026-05-23T12:00:00+00:00",
+        "temp_air": 26.977998733520508,
+        "wind_speed": 23.85797882080078,
+        "ghi": 896.0,
+        "dhi": 130.0,
+        "dni": 841.7277221679688
+      },
+      "weather_source_rows": 192,
+      "weather_window_rows": 6,
+      "weather_notes": [],
+      "baseline_same_hour": {
+        "count": 144,
+        "mean": 20.066418525564554,
+        "std": 1.6981508634401332,
+        "min": 13.34714575722678,
+        "max": 21.12629738062399,
+        "p95": 20.95852
+      }
+    },
+    "inference_hints": []
+  },
+  "input_record": {
+    "timestamp": 1779537763591,
+    "data": {
+      "type": "llm.prediction.input",
+      "input": "<|turn>system\n<|think|>\nYou are a photovoltaic anomaly diagnostics assistant. Given event details and historical sensor/simulation/pose statistics, infer the most likely root cause. Prefer the most specific applicable PV fault family: electrical fault, environmental effect, degradation, sensor fault, communication, weather, soiling, orientation issue, model mismatch, or unknown. Use only provided evidence. If uncertain, say unknown with low confidence. Return strict JSON with keys: root_cause, root_cause_category, confidence, evidence, recommended_action.<turn|>\n<|turn>user\nDiagnose this anomaly event.\nAllowed root_cause_category values and preferred examples:\n- electrical_fault: partial shading, string failure, bypass diode fault, hotspot, inverter fault or inefficiency\n- environmental_effect: snow cover, external shading, temperature extremes, wind-driven derating or other site conditions\n- degradation: PID, microcracks, delamination, corrosion, solder fatigue or long-term aging\n- sensor_fault: irradiance, temperature, current or voltage sensor drift, offset, stuck values or noisy readings\n- communication: telemetry loss, packet loss, stale samples or missing data transport\n- weather: cloud passages, rain, haze, wind or other short-lived meteorological changes\n- soiling: dust, dirt, pollen, bird droppings, fouling or surface contamination\n- model_mismatch: simulation-versus-reality gap without a clear hardware or sensor fault\n- orientation_issue: tilt, azimuth or tracker misalignment\n- unknown: insufficient evidence\nUse electrical_fault for partial shading, string failures, bypass diode faults, inverter faults or other electrical component problems.\nUse environmental_effect for snow cover, external shading, temperature extremes, or other site/environment effects that are not pure weather transients.\nUse degradation for PID, microcracks, delamination, corrosion, or other aging mechanisms.\nUse sensor_fault for drift, offset, stuck values, noisy readings, or implausible telemetry.\nUse communication for missing data, telemetry loss, packet loss, or stale samples.\nUse weather when the mismatch is driven by short-lived meteorological changes.\nUse soiling for persistent dirt/dust contamination or surface fouling.\nReturn confidence between 0 and 1.\n\nContext JSON:\n{\"event\": {\"anomaly_type\": \"voltage\", \"status\": \"started\", \"severity\": \"severe\", \"detected_at\": \"2026-05-23T12:02:43.413563+00:00\", \"start_time\": \"2026-05-23T12:02:23\", \"duration_seconds\": null, \"data_points\": 1, \"panel_id\": null}, \"detection_context\": {\"field\": \"bus_voltage\", \"observed_value\": 16.7800835393447, \"simulated_value\": 20.753645774024335, \"absolute_diff\": 3.9735622346796333, \"rmse\": 0.08008121393235383, \"window_size\": 20, \"moderate_threshold\": 2.0, \"severe_threshold\": 2.0, \"threshold_source\": \"rolling_rmse_with_minimum\", \"thresholds_minimum\": 2.0, \"rmse_window_capacity\": 20}, \"history\": {\"window_minutes\": 90, \"smartpv\": {\"power\": {\"count\": 240, \"min\": 15.159929486327083, \"max\": 15.621949185743047, \"mean\": 15.375700690746582, \"std\": 0.07805877904670233, \"p05\": 15.247938598247258, \"p95\": 15.50361167527384, \"last\": 15.493772116268147, \"trend_per_step\": 0.00015364427184326319}, \"current\": {\"count\": 240, \"min\": 1.0066482987809766, \"max\": 1.0617179063759004, \"mean\": 1.033260605039182, \"std\": 0.009945923421396692, \"p05\": 1.017696509214959, \"p95\": 1.0487999169699278, \"last\": 1.0330553817428656, \"trend_per_step\": -1.2772002853267777e-05}, \"bus_voltage\": {\"count\": 240, \"min\": 20.5554855860615, \"max\": 21.061230776886283, \"mean\": 20.782540794447005, \"std\": 0.10229616828928763, \"p05\": 20.619279544424085, \"p95\": 20.958096639216365, \"last\": 20.76431084214379, \"trend_per_step\": 3.499795586275755e-06}}, \"simulation\": {\"power\": {\"count\": 240, \"min\": 15.371360270637151, \"max\": 15.371360270637151, \"mean\": 15.371360270637153, \"std\": 1.7763568394002505e-15, \"p05\": 15.371360270637151, \"p95\": 15.371360270637151, \"last\": 15.371360270637151, \"trend_per_step\": -6.6408473374411435e-18}, \"current\": {\"count\": 240, \"min\": 1.0330828217188328, \"max\": 1.0330828217188328, \"mean\": 1.0330828217188324, \"std\": 4.440892098500626e-16, \"p05\": 1.0330828217188328, \"p95\": 1.0330828217188328, \"last\": 1.0330828217188328, \"trend_per_step\": -1.6602118343602859e-18}, \"bus_voltage\": {\"count\": 240, \"min\": 20.786820487884142, \"max\": 20.786820487884142, \"mean\": 20.786820487884142, \"std\": 0.0, \"p05\": 20.786820487884142, \"p95\": 20.786820487884142, \"last\": 20.786820487884142, \"trend_per_step\": 0.0}}, \"pose\": {\"yaw\": {\"count\": 240, \"min\": 180.0, \"max\": 180.0, \"mean\": 180.0, \"std\": 0.0, \"p05\": 180.0, \"p95\": 180.0, \"last\": 180.0, \"trend_per_step\": -4.250142295962332e-16}, \"pitch\": {\"count\": 240, \"min\": 0.0, \"max\": 0.0, \"mean\": 0.0, \"std\": 0.0, \"p05\": 0.0, \"p95\": 0.0, \"last\": 0.0, \"trend_per_step\": 0.0}, \"roll\": {\"count\": 240, \"min\": 0.0, \"max\": 0.0, \"mean\": 0.0, \"std\": 0.0, \"p05\": 0.0, \"p95\": 0.0, \"last\": 0.0, \"trend_per_step\": 0.0}}, \"weather\": {\"temp_air\": {\"count\": 6, \"min\": 26.577999114990234, \"max\": 26.977998733520508, \"mean\": 26.794665972391766, \"std\": 0.13743676166771093, \"p05\": 26.602999210357666, \"p95\": 26.96549892425537, \"last\": 26.977998733520508, \"trend_per_step\": 0.07999992370605541}, \"wind_speed\": {\"count\": 6, \"min\": 23.85797882080078, \"max\": 24.522315979003906, \"mean\": 24.235300064086914, \"std\": 0.28946086546547806, \"p05\": 23.85797882080078, \"p95\": 24.51768970489502, \"last\": 23.85797882080078, \"trend_per_step\": -0.1541738237653445}, \"ghi\": {\"count\": 6, \"min\": 896.0, \"max\": 934.0, \"mean\": 921.0, \"std\": 13.711309200802088, \"p05\": 899.75, \"p95\": 934.0, \"last\": 896.0, \"trend_per_step\": -7.599999999999987}, \"dhi\": {\"count\": 6, \"min\": 130.0, \"max\": 133.0, \"mean\": 131.83333333333334, \"std\": 1.0671873729054748, \"p05\": 130.25, \"p95\": 133.0, \"last\": 130.0, \"trend_per_step\": -0.6000000000000036}, \"dni\": {\"count\": 6, \"min\": 841.7277221679688, \"max\": 851.2765502929688, \"mean\": 847.9844767252604, \"std\": 3.3835963349215157, \"p05\": 842.7339935302734, \"p95\": 851.2438354492188, \"last\": 841.7277221679688, \"trend_per_step\": -1.870996093750052}, \"availability\": {\"status\": \"ok\", \"source\": \"openmeteo_archive\", \"source_rows\": 192, \"window_rows\": 6}}, \"weather_latest\": {\"timestamp\": \"2026-05-23T12:00:00+00:00\", \"temp_air\": 26.977998733520508, \"wind_speed\": 23.85797882080078, \"ghi\": 896.0, \"dhi\": 130.0, \"dni\": 841.7277221679688}, \"weather_source_rows\": 192, \"weather_window_rows\": 6, \"weather_notes\": [], \"baseline_same_hour\": {\"count\": 144, \"mean\": 20.066418525564554, \"std\": 1.6981508634401332, \"min\": 13.34714575722678, \"max\": 21.12629738062399, \"p95\": 20.95852}}, \"inference_hints\": []}<turn|>\n<|turn>model\n",
+      "modelPath": "qwen/qwen3.5-9b",
+      "modelIdentifier": "qwen/qwen3.5-9b"
+    }
+  },
+  "output_record": {
+    "timestamp": 1787246568909,
+    "data": {
+      "type": "llm.prediction.output",
+      "output": "{\n  \"root_cause\": \"partial_shading\",\n  \"root_cause_category\": \"electrical_fault\",\n  \"confidence\": 0.92,\n  \"evidence\": [\n    \"Observed bus_voltage (16.78V) is significantly lower than simulated value (20.75V), indicating a voltage drop inconsistent with normal operation.\",\n    \"Historical data shows stable bus_voltage (~20.78V) and current (~1.03A) over the last 90 minutes, ruling out gradual degradation or sensor drift.\",\n    \"Simulation values are constant (std=0), suggesting the model correctly predicts ideal conditions for the given weather (GHI ~896W/m²).\",\n    \"The sudden drop to a single data point with severe severity suggests an instantaneous event like a cloud shadow passing over part of the array, causing bypass diodes to activate or reducing effective series voltage.\",\n    \"Wind speed is high (~24 m/s), which could exacerbate shading effects if clouds are moving rapidly, but the primary electrical symptom is the voltage collapse.\"\n  ],\n  \"recommended_action\": \"Verify real-time camera imagery or satellite cloud data for the specific timestamp (2026-05-23T12:02:43) to confirm transient cloud shading. If no clouds are present, inspect string connections and bypass diode functionality for intermittent faults.\"\n}",
+      "stats": {
+        "stopReason": "eosFound",
+        "tokensPerSecond": 20.786472994482345,
+        "numGpuLayers": -1,
+        "timeToFirstTokenSec": null,
+        "totalTimeSec": 14.769,
+        "promptTokensCount": 3402,
+        "predictedTokensCount": 307,
+        "totalTokensCount": 3709
+      },
+      "modelIdentifier": "qwen/qwen3.5-9b"
+    }
+  }
+}

@@ -1,0 +1,1384 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "llm_context",
+  "description": "LLM input context built by anomaly classification system",
+  "type": "object",
+  "properties": {
+    "detection_context": {
+      "type": "object",
+      "properties": {
+        "absolute_diff": {
+          "type": "number"
+        },
+        "field": {
+          "type": "string"
+        },
+        "moderate_threshold": {
+          "type": "number"
+        },
+        "observed_value": {
+          "type": "number"
+        },
+        "rmse": {
+          "type": "number"
+        },
+        "rmse_window_capacity": {
+          "type": "integer"
+        },
+        "severe_threshold": {
+          "type": "number"
+        },
+        "simulated_value": {
+          "type": "number"
+        },
+        "threshold_source": {
+          "type": "string"
+        },
+        "thresholds_minimum": {
+          "type": "number"
+        },
+        "window_size": {
+          "type": "integer"
+        }
+      },
+      "required": []
+    },
+    "event": {
+      "type": "object",
+      "properties": {
+        "anomaly_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "data_points": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "detected_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "duration_seconds": {
+          "type": [
+            "null",
+            "number"
+          ]
+        },
+        "panel_id": {
+          "description": "Passed through unchanged from payload.get(\"panel_id\"); null when absent."
+        },
+        "severity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "start_time": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "anomaly_type",
+        "data_points",
+        "detected_at",
+        "duration_seconds",
+        "panel_id",
+        "severity",
+        "start_time",
+        "status"
+      ]
+    },
+    "history": {
+      "type": "object",
+      "properties": {
+        "baseline_same_hour": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "count": {
+              "type": "integer"
+            },
+            "max": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "mean": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "min": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "p95": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "std": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "count",
+            "max",
+            "mean",
+            "min",
+            "p95",
+            "std"
+          ]
+        },
+        "pose": {
+          "type": "object",
+          "properties": {
+            "pitch": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "roll": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "yaw": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "orientation_yaw": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "axis_yaw": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "orientation_pitch": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "axis_pitch": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "orientation_roll": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "axis_roll": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            }
+          },
+          "required": []
+        },
+        "simulation": {
+          "type": "object",
+          "properties": {
+            "bus_voltage": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "current": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "power": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "panel_power": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "panel_current": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "panel_bus_voltage": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            }
+          },
+          "required": []
+        },
+        "smartpv": {
+          "type": "object",
+          "properties": {
+            "bus_voltage": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "current": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "power": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "panel_power": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "panel_current": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "panel_bus_voltage": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            }
+          },
+          "required": []
+        },
+        "weather": {
+          "type": "object",
+          "properties": {
+            "availability": {
+              "type": "object",
+              "properties": {
+                "source": {
+                  "type": "string"
+                },
+                "source_rows": {
+                  "type": "integer"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "window_rows": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "source",
+                "source_rows",
+                "status",
+                "window_rows"
+              ]
+            },
+            "dhi": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "dni": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "ghi": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "temp_air": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            },
+            "wind_speed": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "integer"
+                },
+                "last": {
+                  "type": "number"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "mean": {
+                  "type": "number"
+                },
+                "min": {
+                  "type": "number"
+                },
+                "p05": {
+                  "type": "number"
+                },
+                "p95": {
+                  "type": "number"
+                },
+                "std": {
+                  "type": "number"
+                },
+                "trend_per_step": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "count",
+                "last",
+                "max",
+                "mean",
+                "min",
+                "p05",
+                "p95",
+                "std"
+              ]
+            }
+          },
+          "required": [
+            "availability"
+          ]
+        },
+        "weather_latest": {
+          "type": "object",
+          "properties": {
+            "dhi": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "dni": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ghi": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "temp_air": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "timestamp": {
+              "type": "string"
+            },
+            "wind_speed": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "dhi",
+            "dni",
+            "ghi",
+            "temp_air",
+            "timestamp",
+            "wind_speed"
+          ]
+        },
+        "weather_notes": {
+          "type": "array"
+        },
+        "weather_source_rows": {
+          "type": "integer"
+        },
+        "weather_window_rows": {
+          "type": "integer"
+        },
+        "window_minutes": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "baseline_same_hour",
+        "pose",
+        "simulation",
+        "smartpv",
+        "weather",
+        "weather_latest",
+        "weather_notes",
+        "weather_source_rows",
+        "weather_window_rows",
+        "window_minutes"
+      ]
+    },
+    "inference_hints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "detection_context",
+    "event",
+    "history",
+    "inference_hints"
+  ]
+}

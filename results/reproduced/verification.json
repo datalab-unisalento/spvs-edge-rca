@@ -1,0 +1,28 @@
+{
+  "performance_source": "matching native rerun JSONL captures",
+  "events_per_model": 320,
+  "historical_native_timing_recovered": true,
+  "reports": [
+    {
+      "report": "comparison.md",
+      "matches": true,
+      "only_extra_kappa_row": false,
+      "original_sha256": "89436fe359cedd1b930bdad59a5a59874723a2085391144838bff9ee43d276c0",
+      "generated_sha256": "89436fe359cedd1b930bdad59a5a59874723a2085391144838bff9ee43d276c0"
+    },
+    {
+      "report": "model_comparison_rerun.md",
+      "matches": true,
+      "only_extra_kappa_row": false,
+      "original_sha256": "627527339ef453aa994fbbe646c905b4abf9997d27de0a1569c49eaaf5bde35b",
+      "generated_sha256": "627527339ef453aa994fbbe646c905b4abf9997d27de0a1569c49eaaf5bde35b"
+    },
+    {
+      "report": "macro_confusion_matrix.md",
+      "matches": true,
+      "only_extra_kappa_row": false,
+      "original_sha256": "d9b762501852958a022fc43f5197c098f6c2cec0dbeb805714c8d7ee00451516",
+      "generated_sha256": "d9b762501852958a022fc43f5197c098f6c2cec0dbeb805714c8d7ee00451516"
+    }
+  ]
+}

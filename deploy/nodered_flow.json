@@ -1,0 +1,146 @@
+[
+    {
+        "id": "1199e88406b3f899",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a30d004d24935192",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mosquitto_mqtt_broker",
+        "port": 1883,
+        "clientid": "SMARTPV_NODE_RED",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a7f7ea91feae7171",
+        "type": "http in",
+        "z": "1199e88406b3f899",
+        "name": "",
+        "url": "/panel_orientation",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 220,
+        "wires": [
+            [
+                "2c4ef9730bf200a3"
+            ]
+        ]
+    },
+    {
+        "id": "2c4ef9730bf200a3",
+        "type": "change",
+        "z": "1199e88406b3f899",
+        "name": "change",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.pitch",
+                "pt": "msg",
+                "to": "payload.z_deg",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.yaw",
+                "pt": "msg",
+                "to": "payload.y_deg",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload.roll",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 240,
+        "wires": [
+            [
+                "316a70ac8721ce1c",
+                "ed38fb0b725045fb",
+                "86ab2eb946b62880"
+            ]
+        ]
+    },
+    {
+        "id": "316a70ac8721ce1c",
+        "type": "mqtt out",
+        "z": "1199e88406b3f899",
+        "name": "",
+        "topic": "smartpv/command/set_panel_orientation",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a30d004d24935192",
+        "x": 720,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ed38fb0b725045fb",
+        "type": "http response",
+        "z": "1199e88406b3f899",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 640,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "86ab2eb946b62880",
+        "type": "debug",
+        "z": "1199e88406b3f899",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 100,
+        "wires": []
+    }
+]

@@ -1,0 +1,19 @@
+mqtt:
+  broker_ip: mosquitto_mqtt_broker
+  broker_port: 1883
+topics:
+  smartpv:
+    sensors: smartpv/power
+    position: smartpv/position
+    simulation: smartpv/power/simulation
+    anomaly: smartpv/power/anomaly
+    commands: smartpv/command/set_panel_orientation
+clients:
+  spvs_emulator: SPVS_PV1
+  spvs_emulator_rt: SPVS_PV1
+  pv_sim: SPVS_PV1_SIMULATOR
+  pv_sim_rt: SPVS_PV1_SIM
+  anomaly_identifier: SPVS_ANOMALY_IDENTIFIER
+  anomaly_classifier: SPVS_ANOMALY_CLASSIFIER
+anomaly_identifier:
+  rmse_window_size: 20

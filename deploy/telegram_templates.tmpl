@@ -1,0 +1,91 @@
+{{ define "telegram.message" }}
+<b>{{ .GroupLabels.alertname }}</b>
+
+<b>Tipo Anomalia:</b> {{ if .GroupLabels.anomaly_type }}{{ .GroupLabels.anomaly_type }}{{ else }}{{ .CommonLabels.anomaly_type }}{{ end }}
+<b>Categoria:</b> {{ if .GroupLabels.anomaly_kind }}{{ .GroupLabels.anomaly_kind }}{{ else if .CommonLabels.anomaly_kind }}{{ .CommonLabels.anomaly_kind }}{{ else }}n/d{{ end }}
+<b>Severita:</b> {{ if .GroupLabels.anomaly_severity }}{{ if eq .GroupLabels.anomaly_severity "moderate" }}significativa{{ else if eq .GroupLabels.anomaly_severity "severe" }}critica{{ else }}{{ .GroupLabels.anomaly_severity }}{{ end }}{{ else if .CommonLabels.anomaly_severity }}{{ if eq .CommonLabels.anomaly_severity "moderate" }}significativa{{ else if eq .CommonLabels.anomaly_severity "severe" }}critica{{ else }}{{ .CommonLabels.anomaly_severity }}{{ end }}{{ else }}n/d{{ end }}
+{{ if .GroupLabels.anomaly_field }}<b>Campo:</b> {{ .GroupLabels.anomaly_field }}
+{{ else if .CommonLabels.anomaly_field }}<b>Campo:</b> {{ .CommonLabels.anomaly_field }}
+{{ end }}
+<b>Ambiente:</b> {{ if .GroupLabels.environment }}{{ .GroupLabels.environment }}{{ else if .CommonLabels.environment }}{{ .CommonLabels.environment }}{{ else }}n/d{{ end }}
+{{ if .GroupLabels.panel_id }}<b>Panel ID:</b> {{ .GroupLabels.panel_id }}
+{{ else if .CommonLabels.panel_id }}<b>Panel ID:</b> {{ .CommonLabels.panel_id }}
+{{ end }}
+<b>Servizio:</b> {{ if .GroupLabels.service }}{{ .GroupLabels.service }}{{ else if .CommonLabels.service }}{{ .CommonLabels.service }}{{ else }}n/d{{ end }}
+
+{{ range .Alerts.Firing }}
+{{ if eq .Annotations.event_status "started" }}
+🔴 <b>ANOMALIA RILEVATA</b>
+{{ else }}
+🟢 <b>ANOMALIA RISOLTA</b>
+{{ end }}
+
+<b>Summary:</b> {{ .Annotations.summary }}
+<b>Descrizione:</b> {{ .Annotations.description }}
+{{ if .Annotations.anomaly_kind }}<b>Categoria:</b> {{ .Annotations.anomaly_kind }}
+{{ end }}
+{{ if .Annotations.severity }}<b>Severita:</b> {{ if eq .Annotations.severity "moderate" }}significativa{{ else if eq .Annotations.severity "severe" }}critica{{ else }}{{ .Annotations.severity }}{{ end }}
+{{ end }}
+{{ if .Annotations.anomaly_field }}<b>Campo:</b> {{ .Annotations.anomaly_field }}
+{{ end }}
+{{ if .Annotations.root_cause }}<b>Causa Probabile:</b> {{ .Annotations.root_cause }}
+{{ end }}
+{{ if .Annotations.root_cause_category }}<b>Categoria Causa:</b> {{ .Annotations.root_cause_category }}
+{{ end }}
+{{ if .Annotations.root_cause_confidence }}<b>Confidenza Causa:</b> {{ .Annotations.root_cause_confidence }}
+{{ end }}
+{{ if .Annotations.recommended_action }}<b>Azione Raccomandata:</b> {{ .Annotations.recommended_action }}
+{{ end }}
+{{ if .Annotations.root_cause_evidence }}<b>Evidenze:</b> {{ .Annotations.root_cause_evidence }}
+{{ end }}
+
+{{ if .Annotations.duration_seconds }}<b>Durata:</b> {{ .Annotations.duration_seconds }} secondi
+{{ end }}
+
+{{ if .Annotations.anomaly_start_time }}<b>Inizio Anomalia:</b> {{ .Annotations.anomaly_start_time }}
+{{ else }}<b>Inizio Anomalia:</b> {{ .StartsAt.Local.Format "2006-01-02 15:04:05 MST" }}
+{{ end }}
+{{ end }}
+
+{{ if gt (len .Alerts.Resolved) 0 }}
+{{ range .Alerts.Resolved }}
+🟢 <b>ANOMALIA RISOLTA</b>
+
+<b>Summary:</b> {{ .Annotations.summary }}
+<b>Descrizione:</b> {{ .Annotations.description }}
+{{ if .Annotations.anomaly_kind }}<b>Categoria:</b> {{ .Annotations.anomaly_kind }}
+{{ end }}
+{{ if .Annotations.severity }}<b>Severita:</b> {{ if eq .Annotations.severity "moderate" }}significativa{{ else if eq .Annotations.severity "severe" }}critica{{ else }}{{ .Annotations.severity }}{{ end }}
+{{ end }}
+{{ if .Annotations.anomaly_field }}<b>Campo:</b> {{ .Annotations.anomaly_field }}
+{{ end }}
+{{ if .Annotations.root_cause }}<b>Causa Probabile:</b> {{ .Annotations.root_cause }}
+{{ end }}
+{{ if .Annotations.root_cause_category }}<b>Categoria Causa:</b> {{ .Annotations.root_cause_category }}
+{{ end }}
+{{ if .Annotations.root_cause_confidence }}<b>Confidenza Causa:</b> {{ .Annotations.root_cause_confidence }}
+{{ end }}
+{{ if .Annotations.recommended_action }}<b>Azione Raccomandata:</b> {{ .Annotations.recommended_action }}
+{{ end }}
+{{ if .Annotations.root_cause_evidence }}<b>Evidenze:</b> {{ .Annotations.root_cause_evidence }}
+{{ end }}
+
+{{ if .Annotations.duration_seconds }}<b>Durata:</b> {{ .Annotations.duration_seconds }} secondi
+{{ end }}
+{{ if .Annotations.data_points }}<b>Numero Punti:</b> {{ .Annotations.data_points }}
+{{ end }}
+
+{{ if .Annotations.anomaly_start_time }}<b>Inizio Anomalia:</b> {{ .Annotations.anomaly_start_time }}
+{{ else }}<b>Inizio Anomalia:</b> {{ .StartsAt.Local.Format "2006-01-02 15:04:05 MST" }}
+{{ end }}
+{{ if .Annotations.anomaly_end_time }}<b>Fine Anomalia:</b> {{ .Annotations.anomaly_end_time }}
+{{ else if gt .EndsAt.Unix 0 }}<b>Fine Anomalia:</b> {{ .EndsAt.Local.Format "2006-01-02 15:04:05 MST" }}
+{{ end }}
+{{ end }}
+
+{{ if eq (len .Alerts.Firing) 0 }}
+
+✅ <b>TUTTE LE ANOMALIE RISOLTE</b>
+{{ end }}
+{{ end }}
+{{ end }}

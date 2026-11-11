@@ -1,0 +1,242 @@
+# Unified OSS and Python RT deployment. See README.md.
+name: spvs-cameraready
+services:
+  mosquitto_mqtt_broker:
+    ports:
+    - 1883:1883
+    volumes:
+    - ./mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+    image: eclipse-mosquitto:latest
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - mosquitto_sub -h localhost -t '$$SYS/broker/uptime' -C 1 -W 5 || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+  nodered:
+    image: nodered/node-red:latest
+    restart: unless-stopped
+    ports:
+    - 1880:1880
+    volumes:
+    - nodered-data:/data
+    depends_on:
+      mosquitto_mqtt_broker:
+        condition: service_healthy
+  persistence_clickhouse-server:
+    ports:
+    - 8124:8123
+    volumes:
+    - clickhouse-data:/var/lib/clickhouse
+    - clickhouse-logs:/var/log/clickhouse-server
+    environment:
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD:?Set CLICKHOUSE_PASSWORD}
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: '1'
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+    image: clickhouse/clickhouse-server
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - clickhouse-client --password "$$CLICKHOUSE_PASSWORD" --query "SELECT 1"
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+  telegraf:
+    volumes:
+    - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    image: telegraf
+    depends_on:
+      mosquitto_mqtt_broker:
+        condition: service_healthy
+      persistence_clickhouse-server:
+        condition: service_healthy
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fS http://localhost:9273/health || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    environment:
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD:?Set CLICKHOUSE_PASSWORD}
+  alertmanager:
+    image: prom/alertmanager:latest
+    restart: unless-stopped
+    command:
+    - --config.file=/etc/alertmanager/alertmanager.yml
+    - --storage.path=/alertmanager
+    - --web.listen-address=:9093
+    working_dir: /etc/alertmanager
+    environment:
+      TZ: ${ALERT_TIMEZONE:-Europe/Rome}
+    ports:
+    - 9093:9093
+    volumes:
+    - ./generated/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+    - ./telegram_templates.tmpl:/etc/alertmanager/telegram_templates.tmpl:ro
+    - alertmanager-data:/alertmanager
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - wget --no-verbose --no-cache --spider http://localhost:9093/-/healthy 2> /dev/null
+        || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+  grafana:
+    image: grafana/grafana-oss
+    restart: unless-stopped
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fS http://localhost:3000/api/health || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    ports:
+    - 3000:3000
+    volumes:
+    - grafana-data:/var/lib/grafana
+    environment:
+      GF_PLUGINS_PREINSTALL: grafana-clickhouse-datasource,grafana-mqtt-datasource,volkovlabs-form-panel,yesoreyeram-infinity-datasource
+      GF_DASHBOARDS_MIN_REFRESH_INTERVAL: 20ms
+  spvs-emulator-rt:
+    build:
+      context: ../..
+      dockerfile: SPVS_emulator/Dockerfile
+    restart: unless-stopped
+    ports:
+    - 18085:18085
+    volumes:
+    - ./systems.yaml:/app/config/systems.yaml:ro
+    environment:
+    - SPVS_COMMON_CONFIG=/app/config/systems.yaml
+    - SPVS_EMULATOR_RT_HEALTH_PORT=18085
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import urllib.request,os; port=os.environ.get('SPVS_EMULATOR_RT_HEALTH_PORT','18085');
+        urllib.request.urlopen(f'http://localhost:{port}/health', timeout=8).read()
+      interval: 30s
+      timeout: 10s
+      start_period: 15s
+      retries: 3
+    depends_on:
+      mosquitto_mqtt_broker:
+        condition: service_healthy
+  pv-sim-rt:
+    build:
+      context: ../..
+      dockerfile: sistema_simulazione_PV/Dockerfile
+    restart: unless-stopped
+    ports:
+    - 18083:18083
+    volumes:
+    - ./systems.yaml:/app/config/systems.yaml:ro
+    environment:
+    - SPVS_COMMON_CONFIG=/app/config/systems.yaml
+    - PV_SIM_RT_HEALTH_PORT=18083
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import urllib.request,os; port=os.environ.get('PV_SIM_RT_HEALTH_PORT','18083');
+        urllib.request.urlopen(f'http://localhost:{port}/health', timeout=8).read()
+      interval: 30s
+      timeout: 10s
+      start_period: 15s
+      retries: 3
+    depends_on:
+      spvs-emulator-rt:
+        condition: service_started
+      mosquitto_mqtt_broker:
+        condition: service_healthy
+  identificazione-anomalie:
+    build:
+      context: ../..
+      dockerfile: sistema_identificazione_anomalie/Dockerfile
+    restart: unless-stopped
+    ports:
+    - 18081:18081
+    volumes:
+    - ./systems.yaml:/app/config/systems.yaml:ro
+    environment:
+    - SPVS_COMMON_CONFIG=/app/config/systems.yaml
+    - IDENTIFICATION_HEALTH_PORT=18081
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import urllib.request,os; port=os.environ.get('IDENTIFICATION_HEALTH_PORT','18081');
+        urllib.request.urlopen(f'http://localhost:{port}/health', timeout=8).read()
+      interval: 30s
+      timeout: 10s
+      start_period: 15s
+      retries: 3
+    depends_on:
+      pv-sim-rt:
+        condition: service_started
+      mosquitto_mqtt_broker:
+        condition: service_healthy
+  classificazione-anomalie:
+    build:
+      context: ../..
+      dockerfile: sistema_classificazione_anomalie/Dockerfile
+    restart: unless-stopped
+    ports:
+    - 18080:18080
+    volumes:
+    - ./systems.yaml:/app/config/systems.yaml:ro
+    environment:
+    - SPVS_COMMON_CONFIG=/app/config/systems.yaml
+    - CLASSIFICATION_HEALTH_PORT=18080
+    - CLICKHOUSE_DATABASE=${CLICKHOUSE_DATABASE:-default}
+    - CLICKHOUSE_HTTP_URL=http://persistence_clickhouse-server:8123
+    - CLICKHOUSE_PASSWORD=${CLICKHOUSE_PASSWORD:?Set CLICKHOUSE_PASSWORD}
+    - ALERTMANAGER_URL=http://alertmanager:9093/api/v2/alerts
+    - LLM_API_BASE_URL=${LLM_API_BASE_URL:-http://host.docker.internal:1234/v1}
+    - LLM_MODEL=${LLM_MODEL:-local-model}
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import urllib.request,os; port=os.environ.get('CLASSIFICATION_HEALTH_PORT','18080');
+        urllib.request.urlopen(f'http://localhost:{port}/health', timeout=8).read()
+      interval: 30s
+      timeout: 10s
+      start_period: 15s
+      retries: 3
+    depends_on:
+      identificazione-anomalie:
+        condition: service_started
+      mosquitto_mqtt_broker:
+        condition: service_healthy
+      persistence_clickhouse-server:
+        condition: service_healthy
+      alertmanager:
+        condition: service_healthy
+    extra_hosts:
+    - host.docker.internal:host-gateway
+volumes:
+  nodered-data: {}
+  clickhouse-data: {}
+  clickhouse-logs: {}
+  alertmanager-data: {}
+  grafana-data: {}

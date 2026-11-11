@@ -1,0 +1,7 @@
+model,reference,n,correct_avg,correct_pct,physical_electrical,telemetry_and_sensing,atmosphere,other,trials
+gemma-4-e4b,physical_electrical,33.0000,30.0000,90.9091,30.0000,0.2000,2.8000,0.0000,5
+gemma-4-e4b,telemetry_and_sensing,30.0000,30.0000,100.0000,0.0000,30.0000,0.0000,0.0000,5
+gemma-4-e4b,false positives,1.0000,1.0000,100.0000,0.0000,0.0000,1.0000,0.0000,5
+qwen3.5-9b,physical_electrical,33.0000,20.6000,62.4242,20.6000,8.0000,4.4000,0.0000,5
+qwen3.5-9b,telemetry_and_sensing,30.0000,30.0000,100.0000,0.0000,30.0000,0.0000,0.0000,5
+qwen3.5-9b,false positives,1.0000,0.0000,0.0000,0.0000,0.0000,0.0000,1.0000,5

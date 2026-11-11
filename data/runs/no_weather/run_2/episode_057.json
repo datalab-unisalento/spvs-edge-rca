@@ -1,0 +1,165 @@
+{
+  "episode_index": 57,
+  "context": {
+    "event": {
+      "anomaly_type": "missing_voltage_sensors",
+      "status": "started",
+      "severity": null,
+      "detected_at": "2026-05-23T15:18:10.252239+00:00",
+      "start_time": "2026-05-23T15:17:50",
+      "duration_seconds": null,
+      "data_points": 1,
+      "panel_id": null
+    },
+    "detection_context": {},
+    "history": {
+      "window_minutes": 90,
+      "smartpv": {
+        "power": {
+          "count": 240,
+          "min": 4.840888014382071,
+          "max": 4.977468228936704,
+          "mean": 4.914211103747591,
+          "std": 0.02480221452827,
+          "p05": 4.87699456470545,
+          "p95": 4.953475590881859,
+          "last": 4.937146419106658,
+          "trend_per_step": 1.0219227619441777e-05
+        },
+        "current": {
+          "count": 240,
+          "min": 0.31013820006709825,
+          "max": 0.3279534062925455,
+          "mean": 0.3209989672054478,
+          "std": 0.003289673022820298,
+          "p05": 0.3155732615319098,
+          "p95": 0.3263016656245536,
+          "last": 0.3278874783605487,
+          "trend_per_step": 2.3532275413793425e-06
+        },
+        "bus_voltage": {
+          "count": 240,
+          "min": 13.472009642202105,
+          "max": 20.754081314569046,
+          "mean": 19.193143372805423,
+          "std": 2.224279261251634,
+          "p05": 14.716462251122286,
+          "p95": 20.673208719165405,
+          "last": 20.422987579189716,
+          "trend_per_step": 0.021106174845467642
+        }
+      },
+      "simulation": {
+        "power": {
+          "count": 240,
+          "min": 4.914165978938322,
+          "max": 4.914165978938322,
+          "mean": 4.914165978938323,
+          "std": 8.881784197001252e-16,
+          "p05": 4.914165978938322,
+          "p95": 4.914165978938322,
+          "last": 4.914165978938322,
+          "trend_per_step": -3.3204236687205718e-18
+        },
+        "current": {
+          "count": 240,
+          "min": 0.32082526043844495,
+          "max": 0.32082526043844495,
+          "mean": 0.32082526043844506,
+          "std": 1.1102230246251565e-16,
+          "p05": 0.32082526043844495,
+          "p95": 0.32082526043844495,
+          "last": 0.32082526043844495,
+          "trend_per_step": -8.301059171801429e-19
+        },
+        "bus_voltage": {
+          "count": 240,
+          "min": 20.517235228989193,
+          "max": 20.517235228989193,
+          "mean": 20.517235228989193,
+          "std": 0.0,
+          "p05": 20.517235228989193,
+          "p95": 20.517235228989193,
+          "last": 20.517235228989193,
+          "trend_per_step": -1.3281694674882287e-17
+        }
+      },
+      "pose": {
+        "yaw": {
+          "count": 240,
+          "min": 180.0,
+          "max": 180.0,
+          "mean": 180.0,
+          "std": 0.0,
+          "p05": 180.0,
+          "p95": 180.0,
+          "last": 180.0,
+          "trend_per_step": -4.250142295962332e-16
+        },
+        "pitch": {
+          "count": 240,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "std": 0.0,
+          "p05": 0.0,
+          "p95": 0.0,
+          "last": 0.0,
+          "trend_per_step": 0.0
+        },
+        "roll": {
+          "count": 240,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "std": 0.0,
+          "p05": 0.0,
+          "p95": 0.0,
+          "last": 0.0,
+          "trend_per_step": 0.0
+        }
+      },
+      "weather_source_rows": 192,
+      "weather_window_rows": 6,
+      "weather_notes": [],
+      "baseline_same_hour": {
+        "count": 1005,
+        "mean": 19.115203721624564,
+        "std": 0.20753552327348065,
+        "min": 18.45215404828028,
+        "max": 19.458952136267385,
+        "p95": 19.345158
+      }
+    },
+    "inference_hints": [
+      "temperature_trend_change_detected"
+    ]
+  },
+  "input_record": {
+    "timestamp": 1779549490991,
+    "data": {
+      "type": "llm.prediction.input",
+      "input": "<|turn>system\n<|think|>\nYou are a photovoltaic anomaly diagnostics assistant. Given event details and historical sensor/simulation/pose statistics, infer the most likely root cause. Prefer the most specific applicable PV fault family: electrical fault, environmental effect, degradation, sensor fault, communication, weather, soiling, orientation issue, model mismatch, or unknown. Use only provided evidence. If uncertain, say unknown with low confidence. Return strict JSON with keys: root_cause, root_cause_category, confidence, evidence, recommended_action.<turn|>\n<|turn>user\nDiagnose this anomaly event.\nAllowed root_cause_category values and preferred examples:\n- electrical_fault: partial shading, string failure, bypass diode fault, hotspot, inverter fault or inefficiency\n- environmental_effect: snow cover, external shading, temperature extremes, wind-driven derating or other site conditions\n- degradation: PID, microcracks, delamination, corrosion, solder fatigue or long-term aging\n- sensor_fault: irradiance, temperature, current or voltage sensor drift, offset, stuck values or noisy readings\n- communication: telemetry loss, packet loss, stale samples or missing data transport\n- weather: cloud passages, rain, haze, wind or other short-lived meteorological changes\n- soiling: dust, dirt, pollen, bird droppings, fouling or surface contamination\n- model_mismatch: simulation-versus-reality gap without a clear hardware or sensor fault\n- orientation_issue: tilt, azimuth or tracker misalignment\n- unknown: insufficient evidence\nUse electrical_fault for partial shading, string failures, bypass diode faults, inverter faults or other electrical component problems.\nUse environmental_effect for snow cover, external shading, temperature extremes, or other site/environment effects that are not pure weather transients.\nUse degradation for PID, microcracks, delamination, corrosion, or other aging mechanisms.\nUse sensor_fault for drift, offset, stuck values, noisy readings, or implausible telemetry.\nUse communication for missing data, telemetry loss, packet loss, or stale samples.\nUse weather when the mismatch is driven by short-lived meteorological changes.\nUse soiling for persistent dirt/dust contamination or surface fouling.\nReturn confidence between 0 and 1.\n\nContext JSON:\n{\"event\": {\"anomaly_type\": \"missing_voltage_sensors\", \"status\": \"started\", \"severity\": null, \"detected_at\": \"2026-05-23T15:18:10.252239+00:00\", \"start_time\": \"2026-05-23T15:17:50\", \"duration_seconds\": null, \"data_points\": 1, \"panel_id\": null}, \"detection_context\": {}, \"history\": {\"window_minutes\": 90, \"smartpv\": {\"power\": {\"count\": 240, \"min\": 4.840888014382071, \"max\": 4.977468228936704, \"mean\": 4.914211103747591, \"std\": 0.02480221452827, \"p05\": 4.87699456470545, \"p95\": 4.953475590881859, \"last\": 4.937146419106658, \"trend_per_step\": 1.0219227619441777e-05}, \"current\": {\"count\": 240, \"min\": 0.31013820006709825, \"max\": 0.3279534062925455, \"mean\": 0.3209989672054478, \"std\": 0.003289673022820298, \"p05\": 0.3155732615319098, \"p95\": 0.3263016656245536, \"last\": 0.3278874783605487, \"trend_per_step\": 2.3532275413793425e-06}, \"bus_voltage\": {\"count\": 240, \"min\": 13.472009642202105, \"max\": 20.754081314569046, \"mean\": 19.193143372805423, \"std\": 2.224279261251634, \"p05\": 14.716462251122286, \"p95\": 20.673208719165405, \"last\": 20.422987579189716, \"trend_per_step\": 0.021106174845467642}}, \"simulation\": {\"power\": {\"count\": 240, \"min\": 4.914165978938322, \"max\": 4.914165978938322, \"mean\": 4.914165978938323, \"std\": 8.881784197001252e-16, \"p05\": 4.914165978938322, \"p95\": 4.914165978938322, \"last\": 4.914165978938322, \"trend_per_step\": -3.3204236687205718e-18}, \"current\": {\"count\": 240, \"min\": 0.32082526043844495, \"max\": 0.32082526043844495, \"mean\": 0.32082526043844506, \"std\": 1.1102230246251565e-16, \"p05\": 0.32082526043844495, \"p95\": 0.32082526043844495, \"last\": 0.32082526043844495, \"trend_per_step\": -8.301059171801429e-19}, \"bus_voltage\": {\"count\": 240, \"min\": 20.517235228989193, \"max\": 20.517235228989193, \"mean\": 20.517235228989193, \"std\": 0.0, \"p05\": 20.517235228989193, \"p95\": 20.517235228989193, \"last\": 20.517235228989193, \"trend_per_step\": -1.3281694674882287e-17}}, \"pose\": {\"yaw\": {\"count\": 240, \"min\": 180.0, \"max\": 180.0, \"mean\": 180.0, \"std\": 0.0, \"p05\": 180.0, \"p95\": 180.0, \"last\": 180.0, \"trend_per_step\": -4.250142295962332e-16}, \"pitch\": {\"count\": 240, \"min\": 0.0, \"max\": 0.0, \"mean\": 0.0, \"std\": 0.0, \"p05\": 0.0, \"p95\": 0.0, \"last\": 0.0, \"trend_per_step\": 0.0}, \"roll\": {\"count\": 240, \"min\": 0.0, \"max\": 0.0, \"mean\": 0.0, \"std\": 0.0, \"p05\": 0.0, \"p95\": 0.0, \"last\": 0.0, \"trend_per_step\": 0.0}}, \"weather_source_rows\": 192, \"weather_window_rows\": 6, \"weather_notes\": [], \"baseline_same_hour\": {\"count\": 1005, \"mean\": 19.115203721624564, \"std\": 0.20753552327348065, \"min\": 18.45215404828028, \"max\": 19.458952136267385, \"p95\": 19.345158}}, \"inference_hints\": [\"temperature_trend_change_detected\"]}<turn|>\n<|turn>model\n",
+      "modelPath": "google/gemma-4-e4b",
+      "modelIdentifier": "google/gemma-4-e4b"
+    }
+  },
+  "output_record": {
+    "timestamp": 1787233169669,
+    "data": {
+      "type": "llm.prediction.output",
+      "output": "{\"root_cause\": \"missing voltage sensors\", \"root_cause_category\": \"sensor_fault\", \"confidence\": 0.9, \"evidence\": [\"anomaly_type: missing_voltage_sensors\"], \"recommended_action\": \"Check the physical connection and calibration status of the voltage sensors (V-I monitoring points). Verify data transmission integrity for all relevant sensor inputs.\"}",
+      "stats": {
+        "stopReason": "eosFound",
+        "tokensPerSecond": 24.04044508855889,
+        "numGpuLayers": -1,
+        "timeToFirstTokenSec": null,
+        "totalTimeSec": 3.328,
+        "promptTokensCount": 2286,
+        "predictedTokensCount": 80,
+        "totalTokensCount": 2366
+      },
+      "modelIdentifier": "google/gemma-4-e4b"
+    }
+  }
+}

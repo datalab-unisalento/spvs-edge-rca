@@ -1,0 +1,19 @@
+semantic_groups:
+  physical_electrical:
+    - electrical_fault
+    - orientation_issue
+    - model_mismatch
+  atmospheric_effects:
+    - environmental_effect
+    - weather
+  telemetry_and_sensing:
+    - sensor_fault
+    - communication
+  degradation:
+    - degradation
+  contamination:
+    - soiling
+  unknown:
+    - unknown
+
+default_group: unknown

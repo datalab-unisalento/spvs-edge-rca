@@ -1,0 +1,18 @@
+global:
+  resolve_timeout: 5m
+templates:
+  - /etc/alertmanager/telegram_templates.tmpl
+route:
+  receiver: telegram-smartpv
+  group_by: [alertname, anomaly_type, service]
+  group_wait: 10s
+  group_interval: 10s
+  repeat_interval: 1h
+receivers:
+  - name: telegram-smartpv
+    telegram_configs:
+      - bot_token: '${TELEGRAM_BOT_TOKEN}'
+        chat_id: ${TELEGRAM_CHAT_ID}
+        send_resolved: true
+        message: '{{ template "telegram.message" . }}'
+        parse_mode: HTML

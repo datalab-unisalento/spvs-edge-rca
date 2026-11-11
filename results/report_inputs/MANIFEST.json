@@ -1,0 +1,312 @@
+[
+  {
+    "path": "ablation_study/rerun_20260821/validation/full/run_1/summary.json",
+    "sha256": "8452f6a8fd0d8c53a9a7e86a6f3e70531d422ac7067678206407411f4edeea53",
+    "bytes": 53881
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/full/run_1/02_lms_log_stream.log",
+    "sha256": "9da7c96ea3e2127dade15402e8963e5e38693707a557e7f24c2f877cf6acdf86",
+    "bytes": 1063054
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/full/run_2/summary.json",
+    "sha256": "8590e99f868a08b583a0443efbf9d3d8e7b0626fd9d753eab5020f39ccbc3958",
+    "bytes": 56244
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/full/run_2/02_lms_log_stream.log",
+    "sha256": "5612c9887f1805392b24c736d0e87cad22f3a6349f89dd87eef8ce2129aa4c37",
+    "bytes": 1063560
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/full/run_3/summary.json",
+    "sha256": "0a2655526c7e199bf6a745619a3f9682607c5e4968a5c7fed61f6640b077b04d",
+    "bytes": 54569
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/full/run_3/02_lms_log_stream.log",
+    "sha256": "fa7fe1caab9c30344fe8ee6270388a4bb1be2e5e44406e410ee44fef56617db0",
+    "bytes": 1065896
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/full/run_4/summary.json",
+    "sha256": "b5cf9efd5950a553e11a963dd13dc4f36f30e83842f1345925c87dac00c0c0c9",
+    "bytes": 49879
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/full/run_4/02_lms_log_stream.log",
+    "sha256": "ed300061cff5489a453f005ae6396f1f5dd5a519314caa6d7b820b0ea7db36c9",
+    "bytes": 1063332
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/full/run_5/summary.json",
+    "sha256": "bad7f9d006dd9102d413603bc0413d599202228c387420e85ee0793097ea795b",
+    "bytes": 51696
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/full/run_5/02_lms_log_stream.log",
+    "sha256": "addfe5e9d752e34131b571d0ee85b694d25b10fb834d65920bd37a18ffa92f5b",
+    "bytes": 1062120
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/no_hints/run_1/summary.json",
+    "sha256": "1d6cfc295052b2b2ca7eba136280aa181af24028bf332a83132a136d19c4bfba",
+    "bytes": 57209
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/no_hints/run_1/02_lms_log_stream.log",
+    "sha256": "3447fb5558c96f3e382c3cfd35b6201579dfe63995c6593d784c4cdae943dbb4",
+    "bytes": 1057982
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/no_hints/run_2/summary.json",
+    "sha256": "dea3634b558f835d1e3d991d254e0a0ed16036c9ede06e017e22f4ba649cc220",
+    "bytes": 56067
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/no_hints/run_2/02_lms_log_stream.log",
+    "sha256": "e7dd2d8c4bdadffc9b0db83faa5f66a79874d19c28590d4b8a540b82f811b757",
+    "bytes": 1055496
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/no_hints/run_3/summary.json",
+    "sha256": "67129e40946730711fd051974c1772cc44f89312f1b5862667239dd1a550fc87",
+    "bytes": 52770
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/no_hints/run_3/02_lms_log_stream.log",
+    "sha256": "1a1694fea1b16b21df005eca1cf2f4425f074988cee5ad860d0a5d49030da5da",
+    "bytes": 1055642
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/no_hints/run_4/summary.json",
+    "sha256": "c8a34c5fb3a7a3ba85d3be3d2220c34ece1d891dda75a6d1ac8960c633ddebcf",
+    "bytes": 55263
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/no_hints/run_4/02_lms_log_stream.log",
+    "sha256": "54141f8f895e3f5ebc81b0fd4d5e2fdf122ee1d759b3eed3faf1d1f40155e814",
+    "bytes": 1053484
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/no_hints/run_5/summary.json",
+    "sha256": "700867d2212cfb4d7afb724eb4802f89695a13505aca79679d8f192eae99e2eb",
+    "bytes": 53892
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/no_hints/run_5/02_lms_log_stream.log",
+    "sha256": "04913800ed6b3fc0d906d9f1084644d8ae6b295a77ec82b06a34e4f752f754aa",
+    "bytes": 1055996
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/no_weather/run_1/summary.json",
+    "sha256": "70cfaf351750ca829836818b3ecf01d482759448dc9c92a73a0c984ca6d894ac",
+    "bytes": 57653
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/no_weather/run_1/02_lms_log_stream.log",
+    "sha256": "52c8a7b17ebdb0843b53e5dd0e37ff9baa0697eeeae61da4a0b3e8feac37ff25",
+    "bytes": 854052
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/no_weather/run_2/summary.json",
+    "sha256": "0e5cac40c9275cc7bfb18ffadf5daf62ddf94ec41aad702dc52eae008798c5d6",
+    "bytes": 58156
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/no_weather/run_2/02_lms_log_stream.log",
+    "sha256": "cc2507f507591f1ab63bad77188e6d8078729f7c5849ce2dd28f9818598b637c",
+    "bytes": 856598
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/no_weather/run_3/summary.json",
+    "sha256": "399a2bca9329788c5dc8a6126bf72f2fff667f098332ca1c76de84883e19c25d",
+    "bytes": 56209
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/no_weather/run_3/02_lms_log_stream.log",
+    "sha256": "383d731d98c851134cf74a942355aa807fe551f69d5644d26dc367cfc66879c6",
+    "bytes": 857644
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/no_weather/run_4/summary.json",
+    "sha256": "fe05e539e6391e298e929e66e0b7e86a13151f281ea59bb3cf0a9911aee2adf2",
+    "bytes": 58044
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/no_weather/run_4/02_lms_log_stream.log",
+    "sha256": "457b7c0cc04b31d73c55a7c95c586716fdcd5f4ac7b0a585170554fff40a0f53",
+    "bytes": 853652
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/no_weather/run_5/summary.json",
+    "sha256": "a768fc1433a3c1c9c6156a94cbd28baf1051c97370bd94d7ffbc20f1653c5de9",
+    "bytes": 56493
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/no_weather/run_5/02_lms_log_stream.log",
+    "sha256": "0ecf660d0b79d858fa05bba85e1a6aae718b6602320c485f5896b14311a05080",
+    "bytes": 857380
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/no_baseline/run_1/summary.json",
+    "sha256": "80ffae6f6bca973b06e427b3e4c1d9c610933b3adb3aa5efe492d51763d2c45d",
+    "bytes": 53557
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/no_baseline/run_1/02_lms_log_stream.log",
+    "sha256": "3fe88e8a74939f936c005d5ef049c6a222fdb7563d18bd13e4a14a4ff3249408",
+    "bytes": 1045790
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/no_baseline/run_2/summary.json",
+    "sha256": "a0c716f492790e82f49b51d1e0d7773e06686ecdd95b74b4355be91388d93f09",
+    "bytes": 47130
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/no_baseline/run_2/02_lms_log_stream.log",
+    "sha256": "44c3d783a052d730fae70104a0fe0217c11337141c2a892691d906055c848b38",
+    "bytes": 1049410
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/no_baseline/run_3/summary.json",
+    "sha256": "f2dddad9bf26282551d576eec41b6d89081d04dfe7f1fe9b5264eb21c7f701dc",
+    "bytes": 48946
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/no_baseline/run_3/02_lms_log_stream.log",
+    "sha256": "1f928798e4494ba873ece63ef6a1eabb17ee576ea188b30a0b8c188968ce7fca",
+    "bytes": 1044404
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/no_baseline/run_4/summary.json",
+    "sha256": "da93889d9d476d407aa0fd457515d6e033ffa8c496c0ad20a340f530f8579c42",
+    "bytes": 49378
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/no_baseline/run_4/02_lms_log_stream.log",
+    "sha256": "9de8a0d2ed3cb220e3bad7e2f610c858d6084495d1c435fb5f511227683d4de3",
+    "bytes": 1044660
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/no_baseline/run_5/summary.json",
+    "sha256": "ffa63345133c5ec1137bcdab23de49ff2be6e82a08cd9ba571f07626b6882632",
+    "bytes": 52236
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/no_baseline/run_5/02_lms_log_stream.log",
+    "sha256": "883b867a708c1ba995d21cfaeb2f1ba7a5d6b7abd14222783f59f16f85840c03",
+    "bytes": 1045136
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/minimal/run_1/summary.json",
+    "sha256": "a1181fecc77cae5cde48c0728fc880520ff782bcefd1840617c40344fbfa342f",
+    "bytes": 70751
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/minimal/run_1/02_lms_log_stream.log",
+    "sha256": "3cdbb4bbe87c0a5bffca25bb5a66425b43a6ae4abbf4c728d0b41794149f842a",
+    "bytes": 500844
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/minimal/run_2/summary.json",
+    "sha256": "f8034ab61b90227a4497b9d507027b1b88616ab28f6df4b6cf67b5633156e545",
+    "bytes": 68385
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/minimal/run_2/02_lms_log_stream.log",
+    "sha256": "eb8956cc4767c479df0bc11be13e7de1c72d6689c1b074f0f4dd35ed77e7fdcd",
+    "bytes": 500060
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/minimal/run_3/summary.json",
+    "sha256": "0c0827a7a3373e5553484eb840bd421c02259de7059680c695fa16b5970821df",
+    "bytes": 70697
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/minimal/run_3/02_lms_log_stream.log",
+    "sha256": "069a8099f4c2ceb7621efa0d0bbf57deda7d164f33812574d0a8fc4280e3c9df",
+    "bytes": 500846
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/minimal/run_4/summary.json",
+    "sha256": "154c3a5aad36066ea6347586a22c799e63eec0266e523dec13a7981066a8d5cc",
+    "bytes": 68541
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/minimal/run_4/02_lms_log_stream.log",
+    "sha256": "f13cee7605df06fab2656112df01bf3230b6324b0ad63264861bc372b9944e66",
+    "bytes": 501758
+  },
+  {
+    "path": "ablation_study/rerun_20260821/validation/minimal/run_5/summary.json",
+    "sha256": "d0a6a61b800482498e3c297125ceceb6e10a59de7138bc27c4ff606408a92d62",
+    "bytes": 68106
+  },
+  {
+    "path": "ablation_study/rerun_20260821/logs/minimal/run_5/02_lms_log_stream.log",
+    "sha256": "be8263b2351f03cd36fb9e6951813c81780bb4049f983cf709b1500d1bb150bd",
+    "bytes": 500806
+  },
+  {
+    "path": "ablation_study/rerun_20260821/qwen3.5-9b/validation/full/run_1/summary.json",
+    "sha256": "1a06ff17b8c7e6feb21a19a4cdc1a4ac694341440eb6f6e923a89c1a676dcb32",
+    "bytes": 78940
+  },
+  {
+    "path": "ablation_study/rerun_20260821/qwen3.5-9b/logs/full/run_1/02_lms_log_stream.log",
+    "sha256": "6f92c69824b6bf0baaf7edba9b37ca99631b702a673b95de1b9246a908de7fc1",
+    "bytes": 1111518
+  },
+  {
+    "path": "ablation_study/rerun_20260821/qwen3.5-9b/validation/full/run_2/summary.json",
+    "sha256": "c0397f5bcfd9f7a57f0782e69cb64311c562f8c06f15c88c9e31697fb2e42ac7",
+    "bytes": 69180
+  },
+  {
+    "path": "ablation_study/rerun_20260821/qwen3.5-9b/logs/full/run_2/02_lms_log_stream.log",
+    "sha256": "2bf869f458dd6cfa44d51b838c423a1a285da9dfc553d2e1f713af72e86cf0c9",
+    "bytes": 1107204
+  },
+  {
+    "path": "ablation_study/rerun_20260821/qwen3.5-9b/validation/full/run_3/summary.json",
+    "sha256": "691f89faf8c3b336b0195173cbd0c15a8aefc09c845ab2f7038d17648cb7fccb",
+    "bytes": 74273
+  },
+  {
+    "path": "ablation_study/rerun_20260821/qwen3.5-9b/logs/full/run_3/02_lms_log_stream.log",
+    "sha256": "4080fdb09dfedf1aebdba32b933f7be6e6eb918f769f45bfa9c26f4b22f2e18e",
+    "bytes": 1107968
+  },
+  {
+    "path": "ablation_study/rerun_20260821/qwen3.5-9b/validation/full/run_4/summary.json",
+    "sha256": "52cd895e990c7d48837ce5eca063e606b96ac8e46482aabc71021b6f8bea2e50",
+    "bytes": 80734
+  },
+  {
+    "path": "ablation_study/rerun_20260821/qwen3.5-9b/logs/full/run_4/02_lms_log_stream.log",
+    "sha256": "a6a5b364ba28dfc8fc5bd4f91c6545249fc86c48145e9218576d80fb94d7693c",
+    "bytes": 1110520
+  },
+  {
+    "path": "ablation_study/rerun_20260821/qwen3.5-9b/validation/full/run_5/summary.json",
+    "sha256": "2f51065a8b61a088d88af8ef6666df13e01fa4119c6eb110242e5b0cc6a0b287",
+    "bytes": 76989
+  },
+  {
+    "path": "ablation_study/rerun_20260821/qwen3.5-9b/logs/full/run_5/02_lms_log_stream.log",
+    "sha256": "2aa9e9f50c3669e263ef12c24e29cf0c1964c8e4ee9ba299ca609e53cba1646a",
+    "bytes": 1107948
+  },
+  {
+    "path": "ablation_study/rerun_20260821/lms_stream_gemma.jsonl",
+    "sha256": "879507e12c8cf6e4a822414df774efc011a8720fbeebd1ed228163e8f0eb7a41",
+    "bytes": 11249457
+  },
+  {
+    "path": "ablation_study/rerun_20260821/qwen3.5-9b/lms_stream_qwen.jsonl",
+    "sha256": "5c558048e0bceb003b38ca2f17551ce520a805c349738b121190ce5d0d679064",
+    "bytes": 2773043
+  }
+]

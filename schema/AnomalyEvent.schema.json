@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AnomalyEvent",
+  "description": "MQTT anomaly lifecycle payload published by anomaly identification system. Optional fields are omitted when their value is None.",
+  "type": "object",
+  "properties": {
+    "anomaly_type": {
+      "type": "string"
+    },
+    "data_points": {
+      "type": "integer"
+    },
+    "detected_at": {
+      "type": "string"
+    },
+    "duration_seconds": {
+      "type": "number"
+    },
+    "end_time": {
+      "type": "string"
+    },
+    "detection_context": {
+      "type": "object",
+      "properties": {
+        "field": { "type": "string" },
+        "observed_value": { "type": "number" },
+        "simulated_value": { "type": "number" },
+        "absolute_diff": { "type": "number" },
+        "rmse": { "type": "number" },
+        "window_size": { "type": "integer" },
+        "moderate_threshold": { "type": "number" },
+        "severe_threshold": { "type": "number" },
+        "threshold_source": { "type": "string" },
+        "thresholds_minimum": { "type": "number" },
+        "rmse_window_capacity": { "type": "integer" }
+      }
+    },
+    "severity": {
+      "type": "string"
+    },
+    "start_time": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "anomaly_type",
+    "detected_at",
+    "status"
+  ]
+}

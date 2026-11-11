@@ -1,0 +1,21 @@
+{
+  "date": "2026-05-23",
+  "requested_start_probability": 0.005,
+  "duration_points_inclusive": [
+    5,
+    200
+  ],
+  "requested_type_probabilities": {
+    "threshold": 0.5,
+    "null": 0.5
+  },
+  "threshold_fields": [
+    "bus_voltage"
+  ],
+  "seed": null,
+  "seed_status": "No fixed seed found in current source",
+  "current_source_probabilities": {
+    "threshold": 0.5,
+    "null": 0.5
+  }
+}

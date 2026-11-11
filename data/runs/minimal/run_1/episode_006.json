@@ -1,0 +1,55 @@
+{
+  "episode_index": 6,
+  "context": {
+    "event": {
+      "anomaly_type": "voltage",
+      "status": "started",
+      "severity": "severe",
+      "detected_at": "2026-05-23T09:47:17.101836+00:00",
+      "start_time": "2026-05-23T09:46:57",
+      "duration_seconds": null,
+      "data_points": 1,
+      "panel_id": null
+    },
+    "detection_context": {
+      "field": "bus_voltage",
+      "observed_value": 17.53578131318847,
+      "simulated_value": 20.904370423612818,
+      "absolute_diff": 3.368589110424349,
+      "rmse": 0.11001039191586942,
+      "window_size": 20,
+      "moderate_threshold": 2.0,
+      "severe_threshold": 2.0,
+      "threshold_source": "rolling_rmse_with_minimum",
+      "thresholds_minimum": 2.0,
+      "rmse_window_capacity": 20
+    }
+  },
+  "input_record": {
+    "timestamp": 1779529637896,
+    "data": {
+      "type": "llm.prediction.input",
+      "input": "<|turn>system\n<|think|>\nYou are a photovoltaic anomaly diagnostics assistant. Given event details and historical sensor/simulation/pose statistics, infer the most likely root cause. Prefer the most specific applicable PV fault family: electrical fault, environmental effect, degradation, sensor fault, communication, weather, soiling, orientation issue, model mismatch, or unknown. Use only provided evidence. If uncertain, say unknown with low confidence. Return strict JSON with keys: root_cause, root_cause_category, confidence, evidence, recommended_action.<turn|>\n<|turn>user\nDiagnose this anomaly event.\nAllowed root_cause_category values and preferred examples:\n- electrical_fault: partial shading, string failure, bypass diode fault, hotspot, inverter fault or inefficiency\n- environmental_effect: snow cover, external shading, temperature extremes, wind-driven derating or other site conditions\n- degradation: PID, microcracks, delamination, corrosion, solder fatigue or long-term aging\n- sensor_fault: irradiance, temperature, current or voltage sensor drift, offset, stuck values or noisy readings\n- communication: telemetry loss, packet loss, stale samples or missing data transport\n- weather: cloud passages, rain, haze, wind or other short-lived meteorological changes\n- soiling: dust, dirt, pollen, bird droppings, fouling or surface contamination\n- model_mismatch: simulation-versus-reality gap without a clear hardware or sensor fault\n- orientation_issue: tilt, azimuth or tracker misalignment\n- unknown: insufficient evidence\nUse electrical_fault for partial shading, string failures, bypass diode faults, inverter faults or other electrical component problems.\nUse environmental_effect for snow cover, external shading, temperature extremes, or other site/environment effects that are not pure weather transients.\nUse degradation for PID, microcracks, delamination, corrosion, or other aging mechanisms.\nUse sensor_fault for drift, offset, stuck values, noisy readings, or implausible telemetry.\nUse communication for missing data, telemetry loss, packet loss, or stale samples.\nUse weather when the mismatch is driven by short-lived meteorological changes.\nUse soiling for persistent dirt/dust contamination or surface fouling.\nReturn confidence between 0 and 1.\n\nContext JSON:\n{\"event\": {\"anomaly_type\": \"voltage\", \"status\": \"started\", \"severity\": \"severe\", \"detected_at\": \"2026-05-23T09:47:17.101836+00:00\", \"start_time\": \"2026-05-23T09:46:57\", \"duration_seconds\": null, \"data_points\": 1, \"panel_id\": null}, \"detection_context\": {\"field\": \"bus_voltage\", \"observed_value\": 17.53578131318847, \"simulated_value\": 20.904370423612818, \"absolute_diff\": 3.368589110424349, \"rmse\": 0.11001039191586942, \"window_size\": 20, \"moderate_threshold\": 2.0, \"severe_threshold\": 2.0, \"threshold_source\": \"rolling_rmse_with_minimum\", \"thresholds_minimum\": 2.0, \"rmse_window_capacity\": 20}}<turn|>\n<|turn>model\n",
+      "modelPath": "google/gemma-4-e4b",
+      "modelIdentifier": "google/gemma-4-e4b"
+    }
+  },
+  "output_record": {
+    "timestamp": 1787177022173,
+    "data": {
+      "type": "llm.prediction.output",
+      "output": "{\"root_cause\": \"partial shading\", \"root_cause_category\": \"electrical_fault\", \"confidence\": 0.9, \"evidence\": [\"The observed bus voltage (17.53V) is significantly lower than the simulated value (20.90V), indicating a substantial mismatch.\", \"This large discrepancy suggests an electrical fault or significant loss of generation capacity not accounted for in the simulation.\"], \"recommended_action\": \"Inspect the array and surrounding area immediately for physical obstructions, shading sources, or visible signs of component failure (e.g., hotspots, broken wiring). Check inverter performance and string voltages to pinpoint the location of the voltage drop.\"}",
+      "stats": {
+        "stopReason": "eosFound",
+        "tokensPerSecond": 37.9467577428026,
+        "numGpuLayers": -1,
+        "timeToFirstTokenSec": null,
+        "totalTimeSec": 3.663,
+        "promptTokensCount": 758,
+        "predictedTokensCount": 139,
+        "totalTokensCount": 897
+      },
+      "modelIdentifier": "google/gemma-4-e4b"
+    }
+  }
+}
